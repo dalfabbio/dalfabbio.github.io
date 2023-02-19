@@ -1,0 +1,47 @@
+@import "_config.scss";
+
+body {
+  background-color: $main-black;
+}
+
+main {
+  padding: 20px;
+  max-width: 1500px;
+  margin:auto;
+}
+
+h1 {
+  text-align: center;
+} 
+
+
+.bubble-menu {
+   list-style-type: none;
+   padding-left: 50px;
+   display: flex;
+   justify-content: space-between;
+   margin: 0;
+   padding: 0;
+}
+
+.summa-section {
+  width: 100%;
+  border: 3px solid red;
+  display: flex;
+}
+
+.alessandro-fabbian-picture {
+  flex:1;
+  img {
+  width: clamp(150px, 100%, 700px);
+  
+  }
+  
+}
+
+.brief-description {
+  flex: 1;
+  h2 {
+    text-align: center;
+  }
+}

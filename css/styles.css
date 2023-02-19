@@ -1,0 +1,50 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-color: #252627;
+}
+
+main {
+  padding: 20px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.bubble-menu {
+  list-style-type: none;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.summa-section {
+  width: 100%;
+  border: 3px solid red;
+  display: flex;
+}
+
+.alessandro-fabbian-picture {
+  flex: 1;
+}
+.alessandro-fabbian-picture img {
+  width: clamp(150px, 100%, 700px);
+}
+
+.brief-description {
+  flex: 1;
+}
+.brief-description h2 {
+  text-align: center;
+}
