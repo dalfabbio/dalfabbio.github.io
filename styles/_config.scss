@@ -2,6 +2,10 @@ $background-color: #252627;
 $warm-color: #A23415;
 $cold-color: #087E8B;
 $white: rgb(208, 203, 203);
+$predefined-radius: 0.5rem;
+$margin-bottom-section: 3rem;
+$margin-bottom-p: 1rem;
+$padding-section-p: 0.7rem;
 
 
 * {
@@ -22,3 +26,10 @@ main {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+@mixin main-dimension {
+  width: clamp(10rem, 100%, 40rem);
+}

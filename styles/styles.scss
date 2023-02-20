@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
  ul {
    list-style-type: none;
    padding-left: 50px;
@@ -24,9 +25,12 @@
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 3rem;
+  padding: 0 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .skills,
@@ -35,11 +39,8 @@
   
 }
 
-.about {
-  background-color: $warm-color;
-}
-
-.contact {
+.about,
+.contacts {
   background-color: $warm-color;
 }
 
@@ -47,33 +48,30 @@
 //inizio sezione summa
 
 h1 {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
     text-align: center;
 }
 
-@mixin summa-section-dimension {
-  width: clamp(10rem, 100%, 40rem);
-}
-
 .summa-section {
-  width: 100%;
-  border: 3px solid red;
+  border: 3px solid $white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: $margin-bottom-section;
+  padding: $padding-section-p;
+  border-radius: $predefined-radius;
 }
 
 .alessandro-fabbian-picture {
   flex:1;
-
   img {
-    @include summa-section-dimension;
-    padding-bottom: 1rem;
+    width: 100%;
+    margin-bottom: $margin-bottom-p
   }
 }
 
 .brief-description {
-  @include summa-section-dimension;
+  @include main-dimension;
   flex: 1;
   h2 {
     text-align: center;
@@ -81,3 +79,29 @@ h1 {
 }
 
 //fine sezione summa
+
+//inizio sezione about
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  @include main-dimension;
+    div {
+      flex: 1;
+      padding: $padding-section-p;
+      border-radius: $predefined-radius;
+    }
+
+    h2 {
+      margin-bottom: $margin-bottom-p;
+    }
+}
+
+.humanworld {
+  background-color: $warm-color;
+  margin-bottom: $margin-bottom-p;
+}
+
+.techworld {
+  background-color: $cold-color;
+} 

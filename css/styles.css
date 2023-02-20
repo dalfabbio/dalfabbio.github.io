@@ -16,6 +16,10 @@ main {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .bubble-menu {
   display: flex;
   justify-content: center;
@@ -36,9 +40,12 @@ main {
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 3rem;
+  padding: 0 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .skills,
@@ -46,33 +53,32 @@ main {
   background-color: #087E8B;
 }
 
-.about {
-  background-color: #A23415;
-}
-
-.contact {
+.about,
+.contacts {
   background-color: #A23415;
 }
 
 h1 {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .summa-section {
-  width: 100%;
-  border: 3px solid red;
+  border: 3px solid rgb(208, 203, 203);
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
 }
 
 .alessandro-fabbian-picture {
   flex: 1;
 }
 .alessandro-fabbian-picture img {
-  width: clamp(10rem, 100%, 40rem);
-  padding-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .brief-description {
@@ -81,4 +87,27 @@ h1 {
 }
 .brief-description h2 {
   text-align: center;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  width: clamp(10rem, 100%, 40rem);
+}
+.about-section div {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+.about-section h2 {
+  margin-bottom: 1rem;
+}
+
+.humanworld {
+  background-color: #A23415;
+  margin-bottom: 1rem;
+}
+
+.techworld {
+  background-color: #087E8B;
 }
