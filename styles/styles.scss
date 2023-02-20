@@ -16,7 +16,6 @@
    gap: 1rem 3rem;
    margin: 0;
    padding: 1rem 2rem;
-
   }
 }
 
@@ -53,6 +52,7 @@ h1 {
 }
 
 .summa-section {
+  @include main-dimension;
   border: 3px solid $white;
   display: flex;
   flex-direction: column;
@@ -104,4 +104,34 @@ h1 {
 
 .techworld {
   background-color: $cold-color;
-} 
+  margin-bottom: $margin-bottom-section;
+}
+
+//fine sezione about
+
+//inizio sezione skills
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  @include main-dimension;
+    div {
+      flex: 1;
+      padding: $padding-section-p;
+      border-radius: $predefined-radius;
+    }
+
+    h2 {
+      margin-bottom: $margin-bottom-p;
+    }
+}
+
+.soft-skills {
+  background-color: $warm-color;
+}
+
+.hard-skills {
+  background-color: $cold-color;
+  margin-bottom: $margin-bottom-p;
+}
+//fine sezione skills
+
