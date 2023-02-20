@@ -1,46 +1,83 @@
 @import "_config.scss";
 
-body {
-  background-color: $main-black;
-}
 
-main {
-  padding: 20px;
-  max-width: 1500px;
-  margin:auto;
-}
+//MENU
 
-h1 {
-  text-align: center;
-} 
-
-
-.bubble-menu {
+.bubble-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ ul {
    list-style-type: none;
    padding-left: 50px;
-   display: flex;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem 3rem;
    margin: 0;
-   padding: 0;
+   padding: 1rem 2rem;
+
+  }
+}
+
+.section-selector {
+  border: 0.2rem solid $white;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills,
+.portfolio {
+  background-color: $cold-color;
+  
+}
+
+.about {
+  background-color: $warm-color;
+}
+
+.contact {
+  background-color: $warm-color;
+}
+
+//MAIN
+//inizio sezione summa
+
+h1 {
+  padding-bottom: 1rem;
+    text-align: center;
+}
+
+@mixin summa-section-dimension {
+  width: clamp(10rem, 100%, 40rem);
 }
 
 .summa-section {
   width: 100%;
   border: 3px solid red;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .alessandro-fabbian-picture {
   flex:1;
+
   img {
-  width: clamp(150px, 100%, 700px);
+    @include summa-section-dimension;
+    padding-bottom: 1rem;
   }
-  
 }
 
 .brief-description {
+  @include summa-section-dimension;
   flex: 1;
   h2 {
     text-align: center;
   }
 }
+
+//fine sezione summa

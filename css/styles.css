@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: rgb(208, 203, 203);
 }
 
 body {
@@ -16,33 +16,67 @@ main {
   margin: auto;
 }
 
-h1 {
-  text-align: center;
-}
-
 .bubble-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bubble-menu ul {
   list-style-type: none;
   padding-left: 50px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 3rem;
   margin: 0;
-  padding: 0;
+  padding: 1rem 2rem;
+}
+
+.section-selector {
+  border: 0.2rem solid rgb(208, 203, 203);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills,
+.portfolio {
+  background-color: #087E8B;
+}
+
+.about {
+  background-color: #A23415;
+}
+
+.contact {
+  background-color: #A23415;
+}
+
+h1 {
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
 .summa-section {
   width: 100%;
   border: 3px solid red;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .alessandro-fabbian-picture {
   flex: 1;
 }
 .alessandro-fabbian-picture img {
-  width: clamp(150px, 100%, 700px);
+  width: clamp(10rem, 100%, 40rem);
+  padding-bottom: 1rem;
 }
 
 .brief-description {
+  width: clamp(10rem, 100%, 40rem);
   flex: 1;
 }
 .brief-description h2 {

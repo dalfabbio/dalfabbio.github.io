@@ -1,8 +1,7 @@
-$main-black: #252627;
-$yellow: #FFBA08;
-$caribbean: #0F7173;
-$red: #A23415;
-$teal: #087E8B;
+$background-color: #252627;
+$warm-color: #A23415;
+$cold-color: #087E8B;
+$white: rgb(208, 203, 203);
 
 
 * {
@@ -10,6 +9,16 @@ $teal: #087E8B;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: $white;
+}
+
+body {
+  background-color: $background-color;
+}
+
+main {
+  padding: 20px;
+  max-width: 1500px;
+  margin: auto;
 }
 
