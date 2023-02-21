@@ -11,18 +11,27 @@
 
 
 <body>
-  <nav class='bubble-menu'>
-    <ul>
-      <li><a href="#"><div class='section-selector about'>About me</div></a></li>
-      <li><a href="#"><div class='section-selector skills'>Skills</div></li></a>
-      <li><a href="#"><div class='section-selector portfolio'>Portfolio</div></a></li>
-      <li><div class='section-selector contacts'>Get in touch!</div></li>
-    </ul>
-  </nav>
+  <div class='hamburger-menu-container'>
+    <input class="hamburger-menu-checkbox" type="checkbox" name="" id="" />
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
   
+    <nav class='bubble-menu'>
+      <ul>
+        <li><a href="#"><div class='section-selector about'>About me</div></a></li>
+        <li><a href="#"><div class='section-selector skills'>Skills</div></li></a>
+        <li><a href="#"><div class='section-selector portfolio'>Portfolio</div></a></li>
+        <li><a href="#"><div class='section-selector contacts'>Get in touch!</div></a></li>
+      </ul>
+    </nav>
+  </div>
+
   <main>
 
-  <h1>Alessandro Fabbian | Psycholoper</h1>
+  <h1>Alessandro Fabbian | Psychologist &amp; Developer</h1>
 
   <section class='summa-section'>
 
@@ -70,5 +79,18 @@
   </section>
 
 </main>
+
+<script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("bubble-menu").style.top = "0";
+    } else {
+      document.getElementById("bubble-menu").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  </script>
 </body>
 </html>
