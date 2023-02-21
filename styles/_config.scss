@@ -8,6 +8,7 @@ $margin-bottom-p: 1rem;
 $padding-section-p: 0.7rem;
 $title-font:'Prompt', sans-serif; //500 & 700
 $corpus-font: 'Oxygen', sans-serif; //400
+$trans: 3px;
 
 
 
@@ -28,7 +29,6 @@ $corpus-font: 'Oxygen', sans-serif; //400
 body {
   background-color: $background-color;
   font-family: $corpus-font;
-
 }
 
 h1 {
@@ -45,7 +45,10 @@ main {
   padding: 20px;
   @include main-dimension;
   margin: auto;
-}
+  position: relative;
+  z-index: -1;
+  transition: 0.3s;
+  }
 
 a {
   text-decoration: none;

@@ -1,21 +1,16 @@
 @import "_config.scss"; //regole generali
 
-
 //MENU
 
-//hamburger menu
-
 .bubble-menu{
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 50px;
+  bottom: 50px;
   right: -15px;
-  opacity:0;
-
   transform: 0.5s;
-
+  z-index:10;
  ul {
    list-style-type: none;
    padding-left: 50px;
@@ -41,12 +36,42 @@
   overflow-wrap: break-word;
 }
 
+.section-selector {
+  transition: 0.3s;
+  
+  &:hover {
+    box-shadow: 0 1px 10px 1px $white;
+  }
+  
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.bubble-menu ul:has(.section-selector:hover) .section-selector:not(.section-selector:hover) {
+  opacity: 0.4;
+}
+
+.skills,
+.portfolio {
+  background-color: $cold-color;
+}
+
+.about,
+.contacts {
+  background-color: $warm-color;
+}
+
+//hamburger menu
+
 .hamburger-menu-container {
   width: 42px;
   height: 42px;
   border-radius: 20px;
+  border: 0.2rem solid $white;
+  background-color: $background-color;
   position: fixed;
-  top: 17px;
+  bottom: 17px;
   right: 20px;
   display: flex;
   justify-content: center;
@@ -57,8 +82,8 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  z-index: 5;
-  opacity: 1;
+  z-index: 10;
+  opacity: 0;
   cursor: pointer;
 }
 
@@ -66,10 +91,11 @@
   display: block;
   height: 20px;
   width: 26px;
-  z-index: 2;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   color: $white;
 }
 
@@ -78,7 +104,7 @@
   height:3px;
   width: 100%;
   border-radius: 10px;
-  background:$white;
+  background: $white;
 }
 
 .hamburger-menu-container .hamburger-lines .line1 {
@@ -96,13 +122,13 @@
 }
 
 .hamburger-menu-container input[type="checkbox"]:checked ~ .bubble-menu{
-  opacity: 1;
+  display: flex;
+  z-index: 10;
 }
 
 body:has(.hamburger-menu-container input[type="checkbox"]:checked) main {
-  opacity: 0.5;
+  opacity: 0.07;
 }
-
 
 .hamburger-menu-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
   transform: rotate(45deg);
@@ -116,38 +142,9 @@ body:has(.hamburger-menu-container input[type="checkbox"]:checked) main {
   transform: rotate(-45deg);
 }
 
+// fine hamburger menu
 
-
-
-
-// FOR DESKTOP
-// .section-selector {
-//   transition: 0.3s;
-  
-//   &:hover {
-//     box-shadow: 0 1px 10px 1px $white;
-//   }
-  
-//   &:active {
-//     box-shadow: none;
-//   }
-// }
-
-// .bubble-menu ul:has(.section-selector:hover) .section-selector:not(.section-selector:hover) {
-//   opacity: 0.4; //hover effect
-// }
-
-.skills,
-.portfolio {
-  background-color: $cold-color;
-}
-
-.about,
-.contacts {
-  background-color: $warm-color;
-}
-
-
+//FINE MENU
 
 
 //MAIN
@@ -160,7 +157,7 @@ h1 {
 
 .summa-section {
   @include main-dimension;
-  border: 3px solid $white;
+  border: 0.2rem solid $white;
   display: flex;
   flex-direction: column;
   align-items: center;
