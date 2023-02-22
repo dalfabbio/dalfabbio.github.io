@@ -12,7 +12,8 @@
 
 <body>
   <div class='hamburger-menu-container'>
-    <input class="hamburger-menu-checkbox" type="checkbox" name="" id="" />
+    <input class="hamburger-menu-opt opener-opt" type="radio" name='hamburger-menu' id="opener" />
+    <input class="hamburger-menu-opt closer-opt" type="radio" name='hamburger-menu' id="closer" />
     <div class="hamburger-lines">
       <span class="line line1"></span>
       <span class="line line2"></span>
@@ -20,12 +21,27 @@
     </div>
   
     <nav class='bubble-menu'>
-      <ul>
-        <li><a href="#"><div class='section-selector about'>About me</div></a></li>
-        <li><a href="#"><div class='section-selector skills'>Skills</div></li></a>
-        <li><a href="#"><div class='section-selector portfolio'>Portfolio</div></a></li>
-        <li><a href="#"><div class='section-selector contacts'>Get in touch!</div></a></li>
-      </ul>
+        <fieldset class='hamburger-form'>          
+          <div onClick="window.location = '#';" class='section-selector about'>
+            <input class='hamburger-menu-opt' id='about' name='hamburger-menu' type="radio" value='about'>
+              <label>About me</label>
+
+          </div>
+          <div onClick="window.location = '#';" class='section-selector skills'>
+            <input class='hamburger-menu-opt' id='skills' name='hamburger-menu' type="radio" value='skills'>
+              <label>Skills</label>
+          </div>
+
+          <div onClick="window.location = '#';" class='section-selector portfolio'>
+            <input class='hamburger-menu-opt' id='portfolio' name='hamburger-menu' type="radio" value='portfolio'>
+            <label>Portfolio</label>
+          </div>
+
+          <div onClick="window.location = '#';" class='section-selector contacts'>
+            <input class='hamburger-menu-opt' id='contacts'name='hamburger-menu' type="radio"> 
+            <label>Get in touch!</label>
+          </div>
+      </fieldset>
     </nav>
   </div>
 

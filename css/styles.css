@@ -43,18 +43,15 @@ a {
   position: absolute;
   bottom: 50px;
   right: -15px;
+  margin-right: 1rem;
   z-index: 10;
-  transition: 1s;
+  transition: 1s ease-in-out;
 }
-.bubble-menu ul {
-  list-style-type: none;
-  padding-left: 50px;
+
+fieldset {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 2rem;
+  gap: 1rem 1.5rem;
 }
 
 .section-selector {
@@ -63,6 +60,7 @@ a {
   height: 4.5rem;
   border-radius: 3rem;
   padding: 0 0.1rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,9 +93,9 @@ a {
 }
 
 .hamburger-menu-container {
-  width: 42px;
-  height: 42px;
-  border-radius: 20px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
   border: 0.2rem solid rgb(208, 203, 203);
   background-color: #252627;
   position: fixed;
@@ -108,13 +106,23 @@ a {
   align-items: center;
 }
 
-.hamburger-menu-checkbox {
+.hamburger-menu-opt {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 4.5rem;
+  height: 4.5rem;
   z-index: 10;
   opacity: 0;
   cursor: pointer;
+}
+
+.opener-opt,
+.closer-opt {
+  width: 3rem;
+  height: 3rem;
+}
+
+.closer-opt {
+  z-index: 9;
 }
 
 .hamburger-lines {
@@ -151,24 +159,28 @@ a {
   transition: transform 0.4s ease-in-out;
 }
 
-.hamburger-menu-container input[type=checkbox]:checked ~ .bubble-menu {
+.hamburger-menu-container #opener[type=radio]:checked ~ .bubble-menu {
   display: flex;
   opacity: 1;
 }
 
-body:has(.hamburger-menu-container input[type=checkbox]:checked) main {
+.hamburger-menu-container #opener[type=radio]:checked + .closer-opt {
+  z-index: 11;
+}
+
+body:has(.hamburger-menu-container #opener[type=radio]:checked) main {
   opacity: 0.07;
 }
 
-.hamburger-menu-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
+.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line1 {
   transform: rotate(45deg);
 }
 
-.hamburger-menu-container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
+.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line2 {
   transform: scaleY(0);
 }
 
-.hamburger-menu-container input[type=checkbox]:checked ~ .hamburger-lines .line3 {
+.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 
