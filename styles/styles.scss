@@ -4,14 +4,16 @@
 
 .bubble-menu{
   display: none;
+  opacity: 0;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 50px;
   right: -15px;
-  transform: 0.5s;
   z-index:10;
- ul {
+  transition: 1s;
+
+  ul {
    list-style-type: none;
    padding-left: 50px;
    display: grid;
@@ -123,7 +125,7 @@
 
 .hamburger-menu-container input[type="checkbox"]:checked ~ .bubble-menu{
   display: flex;
-  z-index: 10;
+  opacity: 1;
 }
 
 body:has(.hamburger-menu-container input[type="checkbox"]:checked) main {
