@@ -26,6 +26,8 @@ main {
   padding: 20px;
   width: clamp(10rem, 100%, 45rem);
   margin: auto;
+  position: relative;
+  z-index: 2;
   transition: opacity 0.3s;
 }
 
@@ -226,18 +228,20 @@ h1 {
   text-align: center;
 }
 
-.about-section {
+.contacts-section, .skills-section, .about-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
   width: clamp(10rem, 100%, 45rem);
+}
+
+.about-section h2 {
+  margin-bottom: 1rem;
 }
 .about-section div {
   flex: 1;
   padding: 0.7rem;
   border-radius: 0.5rem;
-}
-.about-section h2 {
-  margin-bottom: 1rem;
 }
 
 .humanworld {
@@ -250,12 +254,6 @@ h1 {
   margin-bottom: 3rem;
 }
 
-.skills-section {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
-  width: clamp(10rem, 100%, 45rem);
-}
 .skills-section div {
   flex: 1;
   padding: 0.7rem;
@@ -280,4 +278,7 @@ h1 {
 
 .contacts-section h2 {
   text-align: center;
+}
+.contacts-section .contacts-container {
+  background-color: #A23415;
 }

@@ -41,21 +41,28 @@ h1 {
 
 //fine sezione SUMMA
 
+%section-features {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $margin-bottom-section;
+  @include main-dimension;
+}
+
 //inizio sezione ABOUT
 
 .about-section {
-  display: flex;
-  flex-direction: column;
-  @include main-dimension;
-    div {
+ @extend %section-features;
+  
+  h2 {
+    margin-bottom: $margin-bottom-p;
+  } 
+  
+  div {
       flex: 1;
       padding: $padding-section-p;
       border-radius: $predefined-radius;
     }
 
-    h2 {
-      margin-bottom: $margin-bottom-p;
-    }
 }
 
 .humanworld {
@@ -72,10 +79,7 @@ h1 {
 
 //inizio sezione SKILLS
 .skills-section {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: $margin-bottom-section;
-  @include main-dimension;
+  @extend %section-features;
     div {
       flex: 1;
       padding: $padding-section-p;
@@ -106,6 +110,14 @@ h1 {
 //fine sezione PORTFOLIO
 
 //inizio sezione CONTACTS
-.contacts-section h2 {
-  text-align: center;
+.contacts-section {
+  @extend %section-features;
+
+  h2 {
+   text-align: center;
+  }
+
+  .contacts-container {
+    background-color: $warm-color;
+  }
 }
