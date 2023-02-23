@@ -5,7 +5,7 @@
 
 
 //MAIN
-//inizio sezione summa
+//inizio sezione SUMMA
 
 h1 {
   margin-bottom: 1rem;
@@ -39,9 +39,9 @@ h1 {
   }
 }
 
-//fine sezione summa
+//fine sezione SUMMA
 
-//inizio sezione about
+//inizio sezione ABOUT
 
 .about-section {
   display: flex;
@@ -68,12 +68,13 @@ h1 {
   margin-bottom: $margin-bottom-section;
 }
 
-//fine sezione about
+//fine sezione ABOUT
 
-//inizio sezione skills
+//inizio sezione SKILLS
 .skills-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: $margin-bottom-section;
   @include main-dimension;
     div {
       flex: 1;
@@ -94,5 +95,17 @@ h1 {
   background-color: $cold-color;
   margin-bottom: $margin-bottom-p;
 }
-//fine sezione skills
+//fine sezione SKILLS
 
+//inizio sezione PORTOFLIO
+
+.portfolio-section {
+  margin-bottom: $margin-bottom-section;
+}
+
+//fine sezione PORTFOLIO
+
+//inizio sezione CONTACTS
+.contacts-section h2 {
+  text-align: center;
+}

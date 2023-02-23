@@ -19,25 +19,30 @@
       <span class="line line2"></span>
       <span class="line line3"></span>
     </div>
-  
+
     <nav class='bubble-menu'>
-        <fieldset class='hamburger-form'>          
-          <div onClick="window.location = '#';" class='section-selector about'>
+        <fieldset class='hamburger-form'>
+          <div onClick="window.location ='#up-anchor';" class='arrow-up-container'>
+            <input class='hamburger-menu-opt' id='arrow-up' name='hamburger-menu' type="radio" value='arrow-up'>
+            <img src="assets/icons/arrow-up.svg" alt="Move up!"/>
+          </div>
+                
+          <div onClick="window.location = '#about-anchor';" class='section-selector about'>
             <input class='hamburger-menu-opt' id='about' name='hamburger-menu' type="radio" value='about'>
               <label>About me</label>
-
           </div>
-          <div onClick="window.location = '#';" class='section-selector skills'>
+
+          <div onClick="window.location = '#skills-anchor';" class='section-selector skills'>
             <input class='hamburger-menu-opt' id='skills' name='hamburger-menu' type="radio" value='skills'>
               <label>Skills</label>
           </div>
 
-          <div onClick="window.location = '#';" class='section-selector portfolio'>
+          <div onClick="window.location = '#portfolio-anchor';" class='section-selector portfolio'>
             <input class='hamburger-menu-opt' id='portfolio' name='hamburger-menu' type="radio" value='portfolio'>
             <label>Portfolio</label>
           </div>
 
-          <div onClick="window.location = '#';" class='section-selector contacts'>
+          <div onClick="window.location = '#contacts-anchor';" class='section-selector contacts'>
             <input class='hamburger-menu-opt' id='contacts'name='hamburger-menu' type="radio"> 
             <label>Get in touch!</label>
           </div>
@@ -47,12 +52,12 @@
 
   <main>
 
-  <h1>Alessandro Fabbian | Psychologist &amp; Developer</h1>
+  <a id="up-anchor"><h1>Alessandro Fabbian | Psychologist &amp; Developer</h1></a>
 
   <section class='summa-section'>
 
     <div class='alessandro-fabbian-picture'>
-      <img class='alessandro-fabbian-picture' src="images/alessandro-fabbian-summa.jpg" alt="Picture of Alessandro Fabbian on the Sass Brusai Ferrata">
+      <img class='alessandro-fabbian-picture' src="assets/images/alessandro-fabbian-summa.jpg" alt="Picture of Alessandro Fabbian on the Sass Brusai Ferrata">
     </div>
 
     <div class='brief-description'>
@@ -62,7 +67,7 @@
   </section>
 
   <section class='about-section'>
-    <h2>About me</h2>
+    <a id="about-anchor"><h2>About me</h2></a>
     <div class='humanworld'>
       <h3>Human world AGGIUNGERE ICONA </h3> 
      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis adipisci quis reprehenderit reiciendis quasi, aliquid sint ipsum eum illo consequatur natus non autem animi sit voluptatibus! Possimus adipisci commodi ipsa.</p> 
@@ -75,7 +80,9 @@
   </section>
 
   <section class='skills-section'>
-    <h2>Skills</h2>
+    <a id="skills-anchor">
+      <h2>Skills</h2>
+    </a>
     <div class='hard-skills'>
       <h3>Hard skills</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempore dolore voluptate laboriosam aliquid voluptatum cupiditate totam? A libero molestias amet est ab saepe qui dolore sunt itaque omnis. Odio! </p>
@@ -87,26 +94,36 @@
   </section>
 
   <section class='portfolio-section'>
-
+   <a id="portfolio-anchor">
+    <h2>Portfolio</h2>
+  </a>
   </section>
 
   <section class='contacts-section'>
+    <a id="contacts-anchor">
+      <h2>Eager to know more?</h2>
+    </a>
+    <div class='social-media'>
+      <div class='git-link'></div>
+      <div class='linkedin-link'></div>
+    </div>
 
+    <form target="_blank" action="https://formsubmit.co/60ca770ce823fa9bf64b8b62d09b2180" method="POST">
+      <label for="name">Who are you?</label>
+      <input id='name' name='name' type='text' placeholder='Your name or however you like to be called' required>
+
+      <label for="email">The way I can reach you back:</label>
+      <input type="email" name='email' placeholder='youremail@email.com (Do not mispell it!)' required/>
+
+      <label for="message">Your message is:</label>
+      <textarea name="message" id='message' rows="7" required>
+      </textarea>
+
+      <button type="submit">Let me see!</button>
+
+  </form>
   </section>
 
 </main>
-
-<script>
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("bubble-menu").style.top = "0";
-    } else {
-      document.getElementById("bubble-menu").style.top = "-50px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-  </script>
 </body>
 </html>

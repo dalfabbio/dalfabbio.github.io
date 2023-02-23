@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: rgb(208, 203, 203);
+  color: #D0CBCB;
 }
 
 body {
@@ -24,10 +24,8 @@ h2, h3 {
 
 main {
   padding: 20px;
-  width: clamp(10rem, 100%, 40rem);
+  width: clamp(10rem, 100%, 45rem);
   margin: auto;
-  position: relative;
-  z-index: -1;
   transition: opacity 0.3s;
 }
 
@@ -55,7 +53,7 @@ fieldset {
 }
 
 .section-selector {
-  border: 0.2rem solid rgb(208, 203, 203);
+  border: 0.2rem solid #D0CBCB;
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 3rem;
@@ -72,7 +70,7 @@ fieldset {
   transition: 0.3s;
 }
 .section-selector:hover {
-  box-shadow: 0 1px 10px 1px rgb(208, 203, 203);
+  box-shadow: 0 1px 10px 1px #D0CBCB;
 }
 .section-selector:active {
   box-shadow: none;
@@ -92,15 +90,15 @@ fieldset {
   background-color: #A23415;
 }
 
-.hamburger-menu-container {
+.hamburger-menu-container, .arrow-up-container {
   width: 3rem;
   height: 3rem;
   border-radius: 2rem;
-  border: 0.2rem solid rgb(208, 203, 203);
+  border: 0.2rem solid #D0CBCB;
   background-color: #252627;
   position: fixed;
-  bottom: 17px;
-  right: 20px;
+  bottom: 1.5rem;
+  right: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,16 +123,28 @@ fieldset {
   z-index: 9;
 }
 
+.arrow-up-container {
+  bottom: 1.5rem;
+  right: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-up-container img {
+  width: 100%;
+  height: 90%;
+}
+
 .hamburger-lines {
   display: block;
-  height: 20px;
-  width: 26px;
+  height: 1.3rem;
+  width: 1.8rem;
   z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: rgb(208, 203, 203);
+  color: #D0CBCB;
 }
 
 .hamburger-lines .line {
@@ -142,45 +152,45 @@ fieldset {
   height: 3px;
   width: 100%;
   border-radius: 10px;
-  background: rgb(208, 203, 203);
+  background: #D0CBCB;
 }
 
-.hamburger-menu-container .hamburger-lines .line1 {
+.hamburger-menu-container .hamburger-lines .line1, .arrow-up-container .hamburger-lines .line1 {
   transform-origin: 0% 0%;
   transition: transform 0.4s ease-in-out;
 }
 
-.hamburger-menu-container .hamburger-lines .line2 {
+.hamburger-menu-container .hamburger-lines .line2, .arrow-up-container .hamburger-lines .line2 {
   transition: transform 0.2s ease-in-out;
 }
 
-.hamburger-menu-container .hamburger-lines .line3 {
+.hamburger-menu-container .hamburger-lines .line3, .arrow-up-container .hamburger-lines .line3 {
   transform-origin: 0% 100%;
   transition: transform 0.4s ease-in-out;
 }
 
-.hamburger-menu-container #opener[type=radio]:checked ~ .bubble-menu {
+.hamburger-menu-container #opener[type=radio]:checked ~ .bubble-menu, .arrow-up-container #opener[type=radio]:checked ~ .bubble-menu {
   display: flex;
   opacity: 1;
 }
 
-.hamburger-menu-container #opener[type=radio]:checked + .closer-opt {
+.hamburger-menu-container #opener[type=radio]:checked + .closer-opt, .arrow-up-container #opener[type=radio]:checked + .closer-opt {
   z-index: 11;
 }
 
-body:has(.hamburger-menu-container #opener[type=radio]:checked) main {
+body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-container #opener[type=radio]:checked) main {
   opacity: 0.07;
 }
 
-.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line1 {
+.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line1, .arrow-up-container #opener[type=radio]:checked ~ .hamburger-lines .line1 {
   transform: rotate(45deg);
 }
 
-.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line2 {
+.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line2, .arrow-up-container #opener[type=radio]:checked ~ .hamburger-lines .line2 {
   transform: scaleY(0);
 }
 
-.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line3 {
+.hamburger-menu-container #opener[type=radio]:checked ~ .hamburger-lines .line3, .arrow-up-container #opener[type=radio]:checked ~ .hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 
@@ -190,8 +200,8 @@ h1 {
 }
 
 .summa-section {
-  width: clamp(10rem, 100%, 40rem);
-  border: 0.2rem solid rgb(208, 203, 203);
+  width: clamp(10rem, 100%, 45rem);
+  border: 0.2rem solid #D0CBCB;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,7 +219,7 @@ h1 {
 }
 
 .brief-description {
-  width: clamp(10rem, 100%, 40rem);
+  width: clamp(10rem, 100%, 45rem);
   flex: 1;
 }
 .brief-description h2 {
@@ -219,7 +229,7 @@ h1 {
 .about-section {
   display: flex;
   flex-direction: column;
-  width: clamp(10rem, 100%, 40rem);
+  width: clamp(10rem, 100%, 45rem);
 }
 .about-section div {
   flex: 1;
@@ -243,7 +253,8 @@ h1 {
 .skills-section {
   display: flex;
   flex-direction: column;
-  width: clamp(10rem, 100%, 40rem);
+  margin-bottom: 3rem;
+  width: clamp(10rem, 100%, 45rem);
 }
 .skills-section div {
   flex: 1;
@@ -261,4 +272,12 @@ h1 {
 .hard-skills {
   background-color: #087E8B;
   margin-bottom: 1rem;
+}
+
+.portfolio-section {
+  margin-bottom: 3rem;
+}
+
+.contacts-section h2 {
+  text-align: center;
 }
