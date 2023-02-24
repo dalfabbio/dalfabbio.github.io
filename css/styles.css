@@ -26,8 +26,6 @@ main {
   padding: 20px;
   width: clamp(10rem, 100%, 45rem);
   margin: auto;
-  position: relative;
-  z-index: 2;
   transition: opacity 0.3s;
 }
 
@@ -78,7 +76,7 @@ fieldset {
   box-shadow: none;
 }
 
-.bubble-menu ul:has(.section-selector:hover) .section-selector:not(.section-selector:hover) {
+.hamburger-form:has(.section-selector:hover) .section-selector:not(.section-selector:hover) {
   opacity: 0.4;
 }
 
@@ -99,6 +97,7 @@ fieldset {
   border: 0.2rem solid #D0CBCB;
   background-color: #252627;
   position: fixed;
+  z-index: 10;
   bottom: 1.5rem;
   right: 1.5rem;
   display: flex;
@@ -110,7 +109,6 @@ fieldset {
   position: absolute;
   width: 4.5rem;
   height: 4.5rem;
-  z-index: 10;
   opacity: 0;
   cursor: pointer;
 }
@@ -119,6 +117,10 @@ fieldset {
 .closer-opt {
   width: 3rem;
   height: 3rem;
+}
+
+.opener-opt {
+  z-index: 11;
 }
 
 .closer-opt {

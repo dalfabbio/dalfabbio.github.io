@@ -44,8 +44,6 @@ main {
   padding: 20px;
   @include main-dimension;
   margin: auto;
-  position: relative;
-  z-index: 2;
   transition: opacity 0.3s;
   }
 
