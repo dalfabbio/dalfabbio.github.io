@@ -72,7 +72,6 @@ h1 {
 
 .techworld {
   background-color: $cold-color;
-  margin-bottom: $margin-bottom-section;
 }
 
 //fine sezione ABOUT
@@ -115,9 +114,89 @@ h1 {
 
   h2 {
    text-align: center;
+   padding-bottom: $margin-bottom-p;
   }
 
   .contacts-container {
     background-color: $warm-color;
+    border-radius: $predefined-radius;
+    display: flex;
+    flex-direction: column;
+    padding: $padding-section-p;
+  }
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  padding: $padding-section-p;
+  margin-bottom: $margin-bottom-p;
+  border-bottom: 1px solid $white;
+  flex: 1;
+}
+
+.git-link,
+.linkedin-link {
+  width: 5rem;
+  
+
+  svg {
+    fill: $white;
+  }
+  
+  &:hover svg {
+    fill: #fff;
+  }
+}
+
+.contacts-form input,
+.contacts-form textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.contacts-form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ flex: 1;
+ 
+
+  > * {
+    margin: $padding-section-p;
+    width: 70%;
+    background-color: transparent;
+    color: $white;
+    
+    &:focus {
+      border: none;
+      box-shadow: inset 0 1px 10px 1px $white;
+    }
+  }
+
+  >::placeholder {
+    font-family: $corpus-font;
+    color: $white;
+
+  }
+
+  input {
+    border-bottom: 1px solid $white;
+    padding: .5rem;
+  }
+
+  textarea {
+    height: 6rem;
+    width: 6rem;
+    border-bottom: 1px solid $white;
+    resize: none;
+  }
+
+  button {
+    width: 20%;
+    border: 1px solid $white;
+    border-radius: .2rem;
+    padding: .5rem;
   }
 }

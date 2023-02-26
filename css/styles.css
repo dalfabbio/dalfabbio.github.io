@@ -253,7 +253,6 @@ h1 {
 
 .techworld {
   background-color: #087E8B;
-  margin-bottom: 3rem;
 }
 
 .skills-section div {
@@ -280,7 +279,78 @@ h1 {
 
 .contacts-section h2 {
   text-align: center;
+  padding-bottom: 1rem;
 }
 .contacts-section .contacts-container {
   background-color: #A23415;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #D0CBCB;
+  flex: 1;
+}
+
+.git-link,
+.linkedin-link {
+  width: 5rem;
+}
+.git-link svg,
+.linkedin-link svg {
+  fill: #D0CBCB;
+}
+.git-link:hover svg,
+.linkedin-link:hover svg {
+  fill: #fff;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.contacts-form > * {
+  margin: 0.7rem;
+  width: 70%;
+  background-color: transparent;
+  color: #D0CBCB;
+}
+.contacts-form > *:focus {
+  border: none;
+  box-shadow: inset 0 1px 10px 1px #D0CBCB;
+}
+.contacts-form > ::placeholder {
+  font-family: "Oxygen", sans-serif;
+  color: #D0CBCB;
+}
+.contacts-form input {
+  border-bottom: 1px solid #D0CBCB;
+  padding: 0.5rem;
+}
+.contacts-form textarea {
+  height: 6rem;
+  width: 6rem;
+  border-bottom: 1px solid #D0CBCB;
+  resize: none;
+}
+.contacts-form button {
+  width: 20%;
+  border: 1px solid #D0CBCB;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
 }
