@@ -2,9 +2,42 @@
 @import "menu"; //menu da desktop e da mobile
 
 
-
-
 //MAIN
+
+.main-title {
+  padding-top: 1.5rem;
+}
+
+.main-title:hover .psychologist {
+  display: none;
+  }
+
+.easter-egg {
+  display: none;
+  position: relative;
+  }
+
+  .easter-egg-tooltip {
+    display: inline-block;
+    position: absolute;
+    top: 2.6rem;
+    right: 1rem;
+    font-family: $corpus-font;
+    font-size: .5rem;
+    border: 1px solid $white;
+    width: 40%;
+  }
+
+.main-title:hover .easter-egg {
+  display: inline;
+  }
+
+  .main-title:hover .easter-egg {
+    display: inline;
+    }
+  
+
+
 //inizio sezione SUMMA
 
 h1 {
@@ -129,6 +162,7 @@ h1 {
 .social-media {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: $padding-section-p;
   margin-bottom: $margin-bottom-p;
   border-bottom: 1px solid $white;
@@ -149,12 +183,6 @@ h1 {
   }
 }
 
-.contacts-form input,
-.contacts-form textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
 
 .contacts-form {
  display: flex;
@@ -166,37 +194,52 @@ h1 {
   > * {
     margin: $padding-section-p;
     width: 70%;
-    background-color: transparent;
+    background: transparent;
     color: $white;
+    font-size: .9rem;
+    border-bottom: 1px solid $white;
+    font-family: $corpus-font;
+
+
     
     &:focus {
-      border: none;
-      box-shadow: inset 0 1px 10px 1px $white;
+      outline: none;
+      border: 1px solid $white;
+      border-radius: $predefined-radius;
+      box-shadow: inset 0 1px 7px 1px $white;
     }
   }
 
-  >::placeholder {
-    font-family: $corpus-font;
-    color: $white;
+    >::placeholder {
+      font-family: $corpus-font;
+      color: $white;
+    }
 
-  }
+    input {
+      padding: .5rem;
+      width: 70%;
+    }
 
-  input {
-    border-bottom: 1px solid $white;
-    padding: .5rem;
-  }
+    textarea {
+      padding: .5rem;
+      height: 5rem;
+      width: 70%;
+      resize: none;
+    }
 
-  textarea {
-    height: 6rem;
-    width: 6rem;
-    border-bottom: 1px solid $white;
-    resize: none;
-  }
+    button {
+      width: 20%;
+      border: 1px solid $white;
+      border-radius: $predefined-radius;
+      padding: .5rem;
 
-  button {
-    width: 20%;
-    border: 1px solid $white;
-    border-radius: .2rem;
-    padding: .5rem;
+    &:hover {
+      background-color: white;
+      cursor: pointer;
+      color: $warm-color;
+      box-shadow: 0 1px 10px 1px $white;
+
+
+    }
   }
 }

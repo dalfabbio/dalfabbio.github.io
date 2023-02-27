@@ -23,7 +23,6 @@ h2, h3 {
 }
 
 main {
-  padding: 20px;
   width: clamp(10rem, 100%, 45rem);
   margin: auto;
   transition: opacity 0.3s;
@@ -198,6 +197,38 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   transform: rotate(-45deg);
 }
 
+.main-title {
+  padding-top: 1.5rem;
+}
+
+.main-title:hover .psychologist {
+  display: none;
+}
+
+.easter-egg {
+  display: none;
+  position: relative;
+}
+
+.easter-egg-tooltip {
+  display: inline-block;
+  position: absolute;
+  top: 2.6rem;
+  right: 1rem;
+  font-family: "Oxygen", sans-serif;
+  font-size: 0.5rem;
+  border: 1px solid #D0CBCB;
+  width: 40%;
+}
+
+.main-title:hover .easter-egg {
+  display: inline;
+}
+
+.main-title:hover .easter-egg {
+  display: inline;
+}
+
 h1 {
   margin-bottom: 1rem;
   text-align: center;
@@ -292,6 +323,7 @@ h1 {
 .social-media {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #D0CBCB;
@@ -311,13 +343,6 @@ h1 {
   fill: #fff;
 }
 
-.contacts-form input,
-.contacts-form textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .contacts-form {
   display: flex;
   flex-direction: column;
@@ -327,30 +352,41 @@ h1 {
 .contacts-form > * {
   margin: 0.7rem;
   width: 70%;
-  background-color: transparent;
+  background: transparent;
   color: #D0CBCB;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #D0CBCB;
+  font-family: "Oxygen", sans-serif;
 }
 .contacts-form > *:focus {
-  border: none;
-  box-shadow: inset 0 1px 10px 1px #D0CBCB;
+  outline: none;
+  border: 1px solid #D0CBCB;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px 7px 1px #D0CBCB;
 }
 .contacts-form > ::placeholder {
   font-family: "Oxygen", sans-serif;
   color: #D0CBCB;
 }
 .contacts-form input {
-  border-bottom: 1px solid #D0CBCB;
   padding: 0.5rem;
+  width: 70%;
 }
 .contacts-form textarea {
-  height: 6rem;
-  width: 6rem;
-  border-bottom: 1px solid #D0CBCB;
+  padding: 0.5rem;
+  height: 5rem;
+  width: 70%;
   resize: none;
 }
 .contacts-form button {
   width: 20%;
   border: 1px solid #D0CBCB;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
+}
+.contacts-form button:hover {
+  background-color: white;
+  cursor: pointer;
+  color: #A23415;
+  box-shadow: 0 1px 10px 1px #D0CBCB;
 }
