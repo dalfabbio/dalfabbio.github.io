@@ -201,7 +201,11 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   padding-top: 1.5rem;
 }
 
-.main-title:hover .psychologist {
+.easter-egg-container {
+  display: inline;
+}
+
+.easter-egg-container:hover .psychologist {
   display: none;
 }
 
@@ -221,11 +225,7 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   width: 40%;
 }
 
-.main-title:hover .easter-egg {
-  display: inline;
-}
-
-.main-title:hover .easter-egg {
+.easter-egg-container:hover .easter-egg {
   display: inline;
 }
 
