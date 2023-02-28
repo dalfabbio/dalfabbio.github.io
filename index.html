@@ -12,13 +12,13 @@
 
 <body>
   <div class='hamburger-menu-container'>
-    <input class="hamburger-menu-opt opener-opt" type="radio" name='hamburger-menu' id="opener" />
-    <input class="hamburger-menu-opt closer-opt" type="radio" name='hamburger-menu' id="closer" />
-    <div class="hamburger-lines">
-      <span class="line line1"></span>
-      <span class="line line2"></span>
-      <span class="line line3"></span>
-    </div>
+      <input class="hamburger-menu-opt opener-opt" type="radio" name='hamburger-menu' id="opener" />
+      <input class="hamburger-menu-opt closer-opt" type="radio" name='hamburger-menu' id="closer" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
 
     <nav class='bubble-menu'>
         <fieldset class='hamburger-form'>
@@ -81,6 +81,7 @@
 
   <section class='about-section'>
     <a id="about-anchor"><h2>About me</h2></a>
+    <div class="about-content">
     <div class='humanworld'>
       <h3>Human world AGGIUNGERE ICONA </h3> 
      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis adipisci quis reprehenderit reiciendis quasi, aliquid sint ipsum eum illo consequatur natus non autem animi sit voluptatibus! Possimus adipisci commodi ipsa.</p> 
@@ -90,12 +91,14 @@
       <h3>Tech world AGGIUNGERE ICONA</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempore dolore voluptate laboriosam aliquid voluptatum cupiditate totam? A libero molestias amet est ab saepe qui dolore sunt itaque omnis. Odio! </p>
     </div>
+  </div>
   </section>
 
   <section class='skills-section'>
     <a id="skills-anchor">
       <h2>Skills</h2>
     </a>
+    <div class="skills-content">
     <div class='hard-skills'>
       <h3>Hard skills</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempore dolore voluptate laboriosam aliquid voluptatum cupiditate totam? A libero molestias amet est ab saepe qui dolore sunt itaque omnis. Odio! </p>
@@ -104,12 +107,16 @@
       <h3>Soft skills</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempore dolore voluptate laboriosam aliquid voluptatum cupiditate totam? A libero molestias amet est ab saepe qui dolore sunt itaque omnis. Odio! </p>
     </div>
+  </div>
   </section>
 
   <section class='portfolio-section'>
    <a id="portfolio-anchor">
     <h2>Portfolio</h2>
   </a>
+  <div class="portfolio-content">
+
+  </div>
   </section>
 
   <section class='contacts-section'>
@@ -117,7 +124,7 @@
       <h2>Eager to know more?</h2>
     </a>
 
-  <div class='contacts-container'>
+  <div class='contacts-content'>
     <div class='social-media'>
       <a href="https://github.com/dalfabbio/" title='Alessandro Fabbian on GitHub'>
         <div class='git-link'>
@@ -132,13 +139,13 @@
     </div>
 
     <form class='contacts-form' target="_blank" action="https://formsubmit.co/60ca770ce823fa9bf64b8b62d09b2180" method="POST">
-      <input id='name' name='name' type='text' placeholder='Your name' required>
+      <input id='name' name='name' type='text' placeholder='Your name' title='Enter your name here' required>
 
-      <input type="email" name='email' placeholder='Your email' required/>
+      <input type="email" name='email' placeholder='Your email' title='Enter your email address here' required/>
 
-      <textarea name="message" id='message' placeholder="Everything you want to share or ask" required></textarea>
+      <textarea name="message" id='message' placeholder="Everything you want to share or ask" alt='Here goes your message for me' required></textarea>
 
-      <button type="submit">Send</button>
+      <button type="submit" title='Send your contact information and your message'>Send</button>
 
   </form>
 </div>

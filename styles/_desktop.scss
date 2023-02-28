@@ -1,0 +1,45 @@
+@media only screen and (min-width:701px) {
+  //MAIN 
+.summa-section,
+.about-content,
+.skills-content {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.contacts-content {
+  flex-direction: row;
+  .social-media {
+    border-bottom: none;
+    border-right: 1px solid $white;
+  }
+}
+
+//FINE MAIN
+
+
+//NAVBAR
+
+//.hamburger-menu-container {display:none;}
+
+.hamburger-lines, .hamburge-menu-opt, .arrow-up-container, #opener, #closer  {
+  display: none;
+}
+
+.hamburger-menu-container {
+  background: transparent;
+  border: none;
+}
+
+.bubble-menu {
+  display: flex;
+  opacity:1;
+}
+
+
+
+
+
+
+
+}

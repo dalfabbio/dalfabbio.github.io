@@ -23,9 +23,10 @@ h2, h3 {
 }
 
 main {
-  width: clamp(10rem, 100%, 45rem);
+  width: clamp(160px, 100%, 800px);
   margin: auto;
   transition: opacity 0.3s;
+  padding: 0.7rem;
 }
 
 a {
@@ -229,16 +230,26 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   display: inline;
 }
 
+.contacts-section, .portfolio-content, .skills-section, .about-section, .summa-section {
+  margin-bottom: 3rem;
+  width: clamp(160px, 100%, 800px);
+}
+
+.summa-section,
+.about-content,
+.skills-content,
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .summa-section {
-  width: clamp(10rem, 100%, 45rem);
   border: 0.2rem solid #D0CBCB;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
   padding: 0.7rem;
@@ -254,18 +265,11 @@ h1 {
 }
 
 .brief-description {
-  width: clamp(10rem, 100%, 45rem);
+  width: clamp(160px, 100%, 800px);
   flex: 1;
 }
 .brief-description h2 {
   text-align: center;
-}
-
-.contacts-section, .skills-section, .about-section {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
-  width: clamp(10rem, 100%, 45rem);
 }
 
 .about-section h2 {
@@ -304,19 +308,21 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.portfolio-section {
+.portfolio-content {
   margin-bottom: 3rem;
+  background-color: #087E8B;
+  height: 12rem;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
 }
 
 .contacts-section h2 {
   text-align: center;
   padding-bottom: 1rem;
 }
-.contacts-section .contacts-container {
+.contacts-section .contacts-content {
   background-color: #A23415;
   border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
   padding: 0.7rem;
 }
 
@@ -389,4 +395,31 @@ h1 {
   cursor: pointer;
   color: #A23415;
   box-shadow: 0 1px 10px 1px #D0CBCB;
+}
+
+@media only screen and (min-width: 701px) {
+  .summa-section,
+  .about-content,
+  .skills-content {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .contacts-content {
+    flex-direction: row;
+  }
+  .contacts-content .social-media {
+    border-bottom: none;
+    border-right: 1px solid #D0CBCB;
+  }
+  .hamburger-lines, .hamburge-menu-opt, .arrow-up-container, #opener, #closer {
+    display: none;
+  }
+  .hamburger-menu-container, .arrow-up-container {
+    background: transparent;
+    border: none;
+  }
+  .bubble-menu {
+    display: flex;
+    opacity: 1;
+  }
 }

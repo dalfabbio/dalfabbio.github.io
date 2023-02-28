@@ -14,8 +14,7 @@ $corpus-font: 'Oxygen', sans-serif; //400
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Prompt:wght@500;700&display=swap');
 
-@mixin main-dimension {
-  width: clamp(10rem, 100%, 45rem);}
+
 
 * {
   border: 0;
@@ -40,10 +39,14 @@ h2, h3 {
   font-weight: 500;
 }
 
+@mixin main-dimension {
+  width: clamp(160px, 100%, 800px);}
+
 main {
   @include main-dimension;
   margin: auto;
   transition: opacity 0.3s;
+  padding: .7rem;
   }
 
 a {

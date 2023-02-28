@@ -1,6 +1,5 @@
-@import "_config.scss"; //regole generali
-@import "menu"; //menu da desktop e da mobile
-
+@import "config"; //regole generali
+@import "hamburger-menu"; //menu da desktop e da mobile
 
 //MAIN
 
@@ -37,21 +36,35 @@
   }
 
 
-  
 
+
+//INIZIO SECTIONS
+
+
+
+%section-features {
+  margin-bottom: $margin-bottom-section;
+  @include main-dimension;
+}
+
+.summa-section,
+.about-content,
+.skills-content,
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+}
 
 //inizio sezione SUMMA
 
 h1 {
   margin-bottom: 1rem;
-    text-align: center;
+  text-align: center;
 }
 
 .summa-section {
-  @include main-dimension;
+  @extend %section-features;
   border: 0.2rem solid $white;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin-bottom: $margin-bottom-section;
   padding: $padding-section-p;
@@ -76,12 +89,6 @@ h1 {
 
 //fine sezione SUMMA
 
-%section-features {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: $margin-bottom-section;
-  @include main-dimension;
-}
 
 //inizio sezione ABOUT
 
@@ -137,8 +144,14 @@ h1 {
 
 //inizio sezione PORTOFLIO
 
-.portfolio-section {
+.portfolio-content {
+  @extend %section-features;
   margin-bottom: $margin-bottom-section;
+  background-color: $cold-color;
+  height: 12rem;
+  border-radius: $predefined-radius;
+  padding: $padding-section-p;
+
 }
 
 //fine sezione PORTFOLIO
@@ -152,11 +165,9 @@ h1 {
    padding-bottom: $margin-bottom-p;
   }
 
-  .contacts-container {
+  .contacts-content {
     background-color: $warm-color;
     border-radius: $predefined-radius;
-    display: flex;
-    flex-direction: column;
     padding: $padding-section-p;
   }
 }
@@ -245,3 +256,8 @@ h1 {
     }
   }
 }
+
+//INIZIO MEDIA QUERIES
+@import "desktop"
+
+//FINE MEDIA QUERIES
