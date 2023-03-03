@@ -66,20 +66,6 @@ fieldset {
   overflow-wrap: break-word;
 }
 
-.section-selector {
-  transition: 0.3s;
-}
-.section-selector:hover {
-  box-shadow: 0 1px 10px 1px #D0CBCB;
-}
-.section-selector:active {
-  box-shadow: none;
-}
-
-.hamburger-form:has(.section-selector:hover) .section-selector:not(.section-selector:hover) {
-  opacity: 0.4;
-}
-
 .skills,
 .portfolio {
   background-color: #087E8B;
@@ -198,8 +184,47 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   transform: rotate(-45deg);
 }
 
+.navbar-container {
+  display: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0.2;
+}
+.navbar-container:hover {
+  opacity: 1;
+  box-shadow: 0 1px 10px 1px #D0CBCB;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7rem 0;
+  max-width: 800px;
+}
+
+.navbar-menu li:hover {
+  text-decoration: underline;
+}
+
+.logo-menu {
+  fill: #D0CBCB;
+  width: 5rem;
+  height: 2.5rem;
+}
+
+.logo {
+  fill: #D0CBCB;
+  width: 7rem;
+}
+
 .main-title {
   padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .easter-egg-container {
@@ -261,7 +286,6 @@ h1 {
 }
 .alessandro-fabbian-picture img {
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 .brief-description {
@@ -410,16 +434,16 @@ h1 {
   .contacts-content .social-media {
     border-bottom: none;
     border-right: 1px solid #D0CBCB;
+    margin-bottom: 0;
   }
-  .hamburger-lines, .hamburge-menu-opt, .arrow-up-container, #opener, #closer {
-    display: none;
+  .humanworld,
+  .hard-skills {
+    margin-bottom: 0;
   }
   .hamburger-menu-container, .arrow-up-container {
-    background: transparent;
-    border: none;
+    display: none;
   }
-  .bubble-menu {
-    display: flex;
-    opacity: 1;
+  .navbar-container {
+    display: block;
   }
 }

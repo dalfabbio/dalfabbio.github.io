@@ -12,7 +12,13 @@
   .social-media {
     border-bottom: none;
     border-right: 1px solid $white;
+    margin-bottom: 0;
   }
+}
+
+.humanworld,
+.hard-skills {
+  margin-bottom:0;
 }
 
 //FINE MAIN
@@ -22,24 +28,11 @@
 
 //.hamburger-menu-container {display:none;}
 
-.hamburger-lines, .hamburge-menu-opt, .arrow-up-container, #opener, #closer  {
+.hamburger-menu-container {
   display: none;
 }
 
-.hamburger-menu-container {
-  background: transparent;
-  border: none;
+.navbar-container {
+  display: block;
 }
-
-.bubble-menu {
-  display: flex;
-  opacity:1;
-}
-
-
-
-
-
-
-
 }

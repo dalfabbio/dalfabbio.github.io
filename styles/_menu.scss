@@ -1,3 +1,5 @@
+//HAMBURGER-MENU
+
 .bubble-menu {
   display: none;
   opacity: 0;
@@ -12,15 +14,13 @@
   }
 
   
-//SEZIONE PER EFFETTO HOVER DA DESKTOP
+  fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+    }
 
-fieldset {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem 1.5rem;
-  }
-
-.section-selector {
+    .section-selector {
   border: 0.2rem solid $white;
   width: 4.5rem;
   height: 4.5rem;
@@ -33,23 +33,6 @@ fieldset {
   text-align: center;
   overflow-wrap: break-word;
 }
-
-.section-selector {
-  transition: 0.3s;
-  
-  &:hover {
-    box-shadow: 0 1px 10px 1px $white;
-  }
-  
-  &:active {
-    box-shadow: none;
-  }
-}
-
-.hamburger-form:has(.section-selector:hover) .section-selector:not(.section-selector:hover) {
-  opacity: 0.4;
-}
-
 .skills,
 .portfolio {
   background-color: $cold-color;
@@ -60,9 +43,26 @@ fieldset {
   background-color: $warm-color;
 }
 
+//SEZIONE PER EFFETTO HOVER DA DESKTOP
+
+// .section-selector {
+//   transition: 0.3s;
+  
+//   &:hover {
+//     box-shadow: 0 1px 10px 1px $white;
+//   }
+  
+//   &:active {
+//     box-shadow: none;
+//   }
+// }
+
+// .hamburger-form:has(.section-selector:hover) .section-selector:not(.section-selector:hover) {
+//   opacity: 0.4;
+// }
+
 //FINE EFFETTO HOVER
 
-//hamburger menu
 
 .hamburger-menu-container {
   width: 3rem;
@@ -175,4 +175,49 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
   transform: rotate(-45deg);
 }
 
-// fine hamburger menu
+//FINE HAMBURGER MENU
+
+
+//NAVBAR
+
+
+
+.navbar-container {
+  display: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0.2;
+
+  // position: -webkit-sticky; /* Safari */
+  // position: sticky;
+  // bottom: 0;
+
+  &:hover {
+    opacity:1;
+    box-shadow: 0 1px 10px 1px $white;
+  }
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .7rem 0;
+  max-width: 800px;
+ 
+}
+
+.navbar-menu li {
+  &:hover {
+    text-decoration:underline;
+  }
+}
+
+.logo-menu {
+  fill: $white;
+  width: 5rem;
+  height: 2.5rem;
+}
+// FINE NAVBAR
