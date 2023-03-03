@@ -185,8 +185,6 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
 .navbar-container {
   display: none;
   width: 100%;
-  display: flex;
-  justify-content: center;
   opacity: 0.2;
 
   // position: -webkit-sticky; /* Safari */

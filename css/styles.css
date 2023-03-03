@@ -187,8 +187,6 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 .navbar-container {
   display: none;
   width: 100%;
-  display: flex;
-  justify-content: center;
   opacity: 0.2;
 }
 .navbar-container:hover {
