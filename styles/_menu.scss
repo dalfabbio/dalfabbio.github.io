@@ -185,15 +185,11 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
 .navbar-container {
   display: none;
   width: 100%;
-  opacity: 0.2;
-
-  // position: -webkit-sticky; /* Safari */
-  // position: sticky;
-  // bottom: 0;
+  opacity: 0.5;
+  justify-content: center;
 
   &:hover {
-    opacity:1;
-    box-shadow: 0 1px 10px 1px $white;
+    opacity: 1;
   }
 }
 
@@ -202,20 +198,26 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: .7rem 0;
-  max-width: 800px;
- 
+  padding-top: .4rem;
+  width: 100%;
+
+  position:fixed;
+  background-color: $background-color;
+  box-shadow: 0 1px 10px 1px $white;
+  border-bottom: 1px solid $white;
+
 }
 
 .navbar-menu li {
   &:hover {
-    text-decoration:underline;
+    text-decoration: underline;
   }
 }
 
 .logo-menu {
   fill: $white;
   width: 5rem;
-  height: 2.5rem;
+  height: 3rem;
+  
 }
 // FINE NAVBAR

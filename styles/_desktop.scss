@@ -1,5 +1,9 @@
 @media only screen and (min-width:701px) {
   //MAIN 
+
+  .main-title {
+    padding-top: 5rem;
+  }
 .summa-section,
 .about-content,
 .skills-content {
@@ -33,6 +37,6 @@
 }
 
 .navbar-container {
-  display: block;
+  display: flex;
 }
 }

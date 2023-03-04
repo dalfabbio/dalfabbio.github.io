@@ -3,17 +3,16 @@
 
 //MAIN
 
-.logo {
-    fill: $white;
-    width: 7rem;
-}
-
-
 .main-title {
-  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.logo {
+  fill: $white;
+  width: 7rem;
+  margin-bottom: $margin-bottom-p;
 }
 
 .easter-egg-container {

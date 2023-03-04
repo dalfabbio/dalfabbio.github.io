@@ -187,11 +187,11 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 .navbar-container {
   display: none;
   width: 100%;
-  opacity: 0.2;
+  opacity: 0.5;
+  justify-content: center;
 }
 .navbar-container:hover {
   opacity: 1;
-  box-shadow: 0 1px 10px 1px #D0CBCB;
 }
 
 .navbar-menu {
@@ -199,8 +199,12 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0.7rem 0;
-  max-width: 800px;
+  padding-top: 0.4rem;
+  width: 100%;
+  position: fixed;
+  background-color: #252627;
+  box-shadow: 0 1px 10px 1px #D0CBCB;
+  border-bottom: 1px solid #D0CBCB;
 }
 
 .navbar-menu li:hover {
@@ -210,19 +214,19 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 .logo-menu {
   fill: #D0CBCB;
   width: 5rem;
-  height: 2.5rem;
+  height: 3rem;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
   fill: #D0CBCB;
   width: 7rem;
-}
-
-.main-title {
-  padding-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .easter-egg-container {
@@ -420,9 +424,12 @@ h1 {
 }
 
 @media only screen and (min-width: 701px) {
+  .main-title {
+    padding-top: 5rem;
+  }
   .summa-section,
-  .about-content,
-  .skills-content {
+.about-content,
+.skills-content {
     flex-direction: row;
     gap: 1rem;
   }
@@ -435,13 +442,13 @@ h1 {
     margin-bottom: 0;
   }
   .humanworld,
-  .hard-skills {
+.hard-skills {
     margin-bottom: 0;
   }
   .hamburger-menu-container, .arrow-up-container {
     display: none;
   }
   .navbar-container {
-    display: block;
+    display: flex;
   }
 }
