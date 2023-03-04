@@ -150,11 +150,13 @@ h1 {
 
 .soft-skills {
   background-color: $warm-color;
+  margin-bottom: $margin-bottom-p;
+  order: 1;
 }
 
 .hard-skills {
   background-color: $cold-color;
-  margin-bottom: $margin-bottom-p;
+  order: 2;
 }
 //fine sezione SKILLS
 

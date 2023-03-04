@@ -334,11 +334,13 @@ h1 {
 
 .soft-skills {
   background-color: #A23415;
+  margin-bottom: 1rem;
+  order: 1;
 }
 
 .hard-skills {
   background-color: #087E8B;
-  margin-bottom: 1rem;
+  order: 2;
 }
 
 .portfolio-content {
@@ -449,8 +451,11 @@ h1 {
     margin-bottom: 0;
   }
   .humanworld,
-  .hard-skills {
+  .soft-skills {
     margin-bottom: 0;
+  }
+  .soft-skills {
+    order: 3;
   }
   .hamburger-menu-container, .arrow-up-container {
     display: none;
