@@ -23,7 +23,7 @@ h2, h3 {
 }
 
 main {
-  width: clamp(160px, 100%, 800px);
+  width: clamp(160px, 100%, 900px);
   margin: auto;
   transition: opacity 0.3s;
   padding: 0.7rem;
@@ -259,7 +259,7 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 
 .contacts-section, .portfolio-content, .skills-section, .about-section, .summa-section {
   margin-bottom: 3rem;
-  width: clamp(160px, 100%, 800px);
+  width: clamp(160px, 100%, 900px);
 }
 
 .summa-section,
@@ -291,7 +291,7 @@ h1 {
 }
 
 .brief-description {
-  width: clamp(160px, 100%, 800px);
+  width: clamp(160px, 100%, 900px);
   flex: 1;
 }
 .brief-description h2 {
@@ -310,6 +310,13 @@ h1 {
 .humanworld {
   background-color: #A23415;
   margin-bottom: 1rem;
+}
+.humanworld ul {
+  list-style-type: circle;
+  margin-left: 1rem;
+}
+.humanworld a {
+  text-decoration: underline;
 }
 
 .techworld {
@@ -428,8 +435,8 @@ h1 {
     padding-top: 5rem;
   }
   .summa-section,
-.about-content,
-.skills-content {
+  .about-content,
+  .skills-content {
     flex-direction: row;
     gap: 1rem;
   }
@@ -442,7 +449,7 @@ h1 {
     margin-bottom: 0;
   }
   .humanworld,
-.hard-skills {
+  .hard-skills {
     margin-bottom: 0;
   }
   .hamburger-menu-container, .arrow-up-container {
