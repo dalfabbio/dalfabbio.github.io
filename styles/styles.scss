@@ -1,5 +1,5 @@
 @import "config"; //regole generali
-@import "menu"; //menu da desktop e da mobile
+@import "menu"; //navbar da desktop e hamburger menu da mobile
 
 //MAIN
 
@@ -31,10 +31,10 @@
   .easter-egg-tooltip {
     display: inline-block;
     position: absolute;
-    top: 2.6rem;
-    right: 1rem;
+    top: 3.4rem;
+    right: .5rem;
     font-family: $corpus-font;
-    font-size: .5rem;
+    font-size: .7rem;
     border: 1px solid $white;
     width: 40%;
   }
@@ -43,13 +43,7 @@
   display: inline;
   }
 
-
-
-
 //INIZIO SECTIONS
-
-
-
 %section-features {
   margin-bottom: $margin-bottom-section;
   @include main-dimension;
@@ -83,6 +77,7 @@ h1 {
   flex:1;
   img {
     width: 100%;
+    border-radius: $predefined-radius
   }
 }
 
@@ -105,6 +100,11 @@ h1 {
   h2 {
     margin-bottom: $margin-bottom-p;
   } 
+
+  h3 {
+    border-bottom: 1px solid $white;
+    margin-bottom:calc($margin-bottom-p*.7);
+  }
   
   div {
       flex: 1;
@@ -130,6 +130,7 @@ h1 {
 
 .techworld {
   background-color: $cold-color;
+  
 }
 
 //fine sezione ABOUT
@@ -146,18 +147,88 @@ h1 {
     h2 {
       margin-bottom: $margin-bottom-p;
     }
+
+    h3 {
+      border-bottom: 1px solid $white;
+      margin-bottom:calc($margin-bottom-p*.7);
+    }
 }
 
-.soft-skills {
+.soft-skills-container {
   background-color: $warm-color;
   margin-bottom: $margin-bottom-p;
   order: 1;
 }
 
-.hard-skills {
+.soft-skills-icons {
+display: flex;
+flex-wrap: wrap;
+
+  svg {
+  fill: $white;
+  max-width: 5rem;
+}
+
+ &>div {
+  flex-basis: 50%;
+ }
+}
+
+.soft-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  p {
+    padding-top: .5rem;
+    text-align: center;
+  }
+}
+
+.teamwork {
+  margin-top: .7rem;
+}
+
+.training>p {
+  margin-top: .7rem; 
+}
+
+.hard-skills-container {
   background-color: $cold-color;
   order: 2;
+  display: flex;
+  flex-direction: column;
 }
+
+.hard-skills-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  >p {
+    font-size: .7rem;
+  }
+}
+
+.hard-skills-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.web-developing-skills {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  svg {
+    fill: $white;
+    max-width: 6rem;
+  }
+}
+
+
 //fine sezione SKILLS
 
 //inizio sezione PORTOFLIO
@@ -168,6 +239,10 @@ h1 {
   background-color: $cold-color;
   height: 12rem;
   border-radius: $predefined-radius;
+  padding: $padding-section-p;
+}
+
+.portfolio-content {
   padding: $padding-section-p;
 
 }

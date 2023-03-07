@@ -15,6 +15,15 @@ body {
 h1 {
   font-family: "Prompt", sans-serif;
   font-weight: 700;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 h2, h3 {
@@ -245,10 +254,10 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 .easter-egg-tooltip {
   display: inline-block;
   position: absolute;
-  top: 2.6rem;
-  right: 1rem;
+  top: 3.4rem;
+  right: 0.5rem;
   font-family: "Oxygen", sans-serif;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   border: 1px solid #D0CBCB;
   width: 40%;
 }
@@ -288,6 +297,7 @@ h1 {
 }
 .alessandro-fabbian-picture img {
   width: 100%;
+  border-radius: 0.5rem;
 }
 
 .brief-description {
@@ -300,6 +310,10 @@ h1 {
 
 .about-section h2 {
   margin-bottom: 1rem;
+}
+.about-section h3 {
+  border-bottom: 1px solid #D0CBCB;
+  margin-bottom: 0.7rem;
 }
 .about-section div {
   flex: 1;
@@ -331,16 +345,78 @@ h1 {
 .skills-section h2 {
   margin-bottom: 1rem;
 }
+.skills-section h3 {
+  border-bottom: 1px solid #D0CBCB;
+  margin-bottom: 0.7rem;
+}
 
-.soft-skills {
+.soft-skills-container {
   background-color: #A23415;
   margin-bottom: 1rem;
   order: 1;
 }
 
-.hard-skills {
+.soft-skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.soft-skills-icons svg {
+  fill: #D0CBCB;
+  max-width: 5rem;
+}
+.soft-skills-icons > div {
+  flex-basis: 50%;
+}
+
+.soft-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.soft-skill p {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.teamwork {
+  margin-top: 0.7rem;
+}
+
+.training > p {
+  margin-top: 0.7rem;
+}
+
+.hard-skills-container {
   background-color: #087E8B;
   order: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.hard-skills-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hard-skills-content > p {
+  font-size: 0.7rem;
+}
+
+.hard-skills-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.web-developing-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.web-developing-skills svg {
+  fill: #D0CBCB;
+  max-width: 6rem;
 }
 
 .portfolio-content {
@@ -348,6 +424,10 @@ h1 {
   background-color: #087E8B;
   height: 12rem;
   border-radius: 0.5rem;
+  padding: 0.7rem;
+}
+
+.portfolio-content {
   padding: 0.7rem;
 }
 
@@ -451,10 +531,10 @@ h1 {
     margin-bottom: 0;
   }
   .humanworld,
-  .soft-skills {
+  .soft-skills-container {
     margin-bottom: 0;
   }
-  .soft-skills {
+  .soft-skills-container {
     order: 3;
   }
   .hamburger-menu-container, .arrow-up-container {
