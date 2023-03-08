@@ -10,6 +10,7 @@
 body {
   background-color: #252627;
   font-family: "Oxygen", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -36,10 +37,24 @@ main {
   margin: auto;
   transition: opacity 0.3s;
   padding: 0.7rem;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D0CBCB;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }
 
 .bubble-menu {
@@ -266,7 +281,7 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   display: inline;
 }
 
-.contacts-section, .portfolio-content, .skills-section, .about-section, .summa-section {
+.contacts-section, .portfolio-section, .skills-section, .about-section, .summa-section {
   margin-bottom: 3rem;
   width: clamp(160px, 100%, 900px);
 }
@@ -419,18 +434,33 @@ h1 {
   max-width: 6rem;
 }
 
-.portfolio-content {
+.portfolio-section {
   margin-bottom: 3rem;
+}
+.portfolio-section h2 {
+  margin-bottom: 1rem;
+}
+
+.portfolio-container {
+  padding: 0.7rem;
+}
+
+.portfolio-content {
   background-color: #087E8B;
   height: 12rem;
   border-radius: 0.5rem;
-  padding: 0.7rem;
+  padding: 2.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-content p {
+  text-align: center;
 }
 
-.portfolio-content {
+.contacts-section {
   padding: 0.7rem;
 }
-
 .contacts-section h2 {
   text-align: center;
   padding-bottom: 1rem;
@@ -545,6 +575,9 @@ h1 {
   }
   .soft-skills-container {
     order: 3;
+  }
+  .portfolio-content > p {
+    width: 50%;
   }
   .hamburger-menu-container, .arrow-up-container {
     display: none;

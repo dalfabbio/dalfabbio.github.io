@@ -217,7 +217,6 @@ flex-wrap: wrap;
 }
 
 .web-developing-skills {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,17 +232,29 @@ flex-wrap: wrap;
 
 //inizio sezione PORTOFLIO
 
-.portfolio-content {
+.portfolio-section {
   @extend %section-features;
   margin-bottom: $margin-bottom-section;
-  background-color: $cold-color;
-  height: 12rem;
-  border-radius: $predefined-radius;
+  h2 {
+    margin-bottom: $margin-bottom-p;
+  } 
+}
+
+.portfolio-container {
   padding: $padding-section-p;
 }
 
 .portfolio-content {
-  padding: $padding-section-p;
+  background-color: $cold-color;
+  height: 12rem;
+  border-radius: $predefined-radius;
+  padding: calc($padding-section-p*3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    text-align:center;
+  }
 
 }
 
@@ -252,6 +263,8 @@ flex-wrap: wrap;
 //inizio sezione CONTACTS
 .contacts-section {
   @extend %section-features;
+  padding: $padding-section-p;
+
 
   h2 {
    text-align: center;
@@ -262,6 +275,7 @@ flex-wrap: wrap;
     background-color: $warm-color;
     border-radius: $predefined-radius;
     padding: $padding-section-p;
+
   }
 }
 
@@ -316,7 +330,7 @@ flex-wrap: wrap;
     }
   }
 
-    >::placeholder {
+    &>::placeholder {
       font-family: $corpus-font;
       color: $white;
     }

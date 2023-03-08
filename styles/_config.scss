@@ -25,6 +25,8 @@ $corpus-font: 'Oxygen', sans-serif; //400
 body {
   background-color: $background-color;
   font-family: $corpus-font;
+  scroll-behavior: smooth;
+
 }
 
 h1 {
@@ -54,9 +56,23 @@ main {
   margin: auto;
   transition: opacity 0.3s;
   padding: .7rem;
+  scroll-behavior: smooth;
   }
 
 a {
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $white;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff; 
 }
 
