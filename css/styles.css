@@ -15,15 +15,15 @@ body {
 h1 {
   font-family: "Prompt", sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
-}
-
-h2 {
   font-size: 2rem;
 }
 
-h3 {
+h2 {
   font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 h2, h3 {
@@ -254,12 +254,12 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 .easter-egg-tooltip {
   display: inline-block;
   position: absolute;
-  top: 3.4rem;
+  top: 3.2rem;
   right: 0.5rem;
   font-family: "Oxygen", sans-serif;
   font-size: 0.7rem;
   border: 1px solid #D0CBCB;
-  width: 40%;
+  width: 45%;
 }
 
 .easter-egg-container:hover .easter-egg {
@@ -513,6 +513,15 @@ h1 {
 }
 
 @media only screen and (min-width: 701px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
   .main-title {
     padding-top: 5rem;
   }
