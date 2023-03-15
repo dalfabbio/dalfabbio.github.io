@@ -7,6 +7,10 @@
   color: #D0CBCB;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #252627;
   font-family: "Oxygen", sans-serif;

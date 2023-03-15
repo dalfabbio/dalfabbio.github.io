@@ -22,6 +22,10 @@ $corpus-font: 'Oxygen', sans-serif; //400
   color: $white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $background-color;
   font-family: $corpus-font;
