@@ -52,13 +52,16 @@
 
 //NAVBAR
 
-//.hamburger-menu-container {display:none;}
-
 .hamburger-menu-container {
   display: none;
 }
 
 .navbar-container {
   display: flex;
+}
+
+.navbar-toggle-container,
+.navbar-toggle-decoration {
+  display: block;
 }
 }
