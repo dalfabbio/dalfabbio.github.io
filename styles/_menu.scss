@@ -238,7 +238,8 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
   height: 8rem;
   border-radius: 150rem;
   background-color: $background-color;
-  transition: .3s;
+  transition: .2s;
+  z-index: 10;
 }
 
 .navbar-toggle-container {
