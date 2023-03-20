@@ -1,0 +1,37 @@
+
+.curriculum-title {
+  padding-top: 3rem;
+}
+
+.cv-section {
+  margin-bottom: $margin-bottom-section;
+  @include main-dimension;
+  background-color: $white;
+  padding: $padding-section-p;
+  height: 12rem;
+  border-radius: $predefined-radius;
+  
+  p {
+    color: $background-color;
+  }
+}
+
+.cvpart-title {
+  font-family: $title-font;
+  font-weight: 700;
+}
+
+.cvpart-subtitle {
+  font-family: $title-font;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cvpart-content {
+  font-family: $corpus-font;
+}
+
+.cvpart-content span {
+  font-style: italic;
+  color: $background-color;
+}

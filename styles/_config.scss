@@ -69,6 +69,10 @@ a {
   width: 7px;
 }
 
+::-webkit-scrollbar-track {
+  background: $background-color;
+}
+
 ::-webkit-scrollbar-thumb {
   background: $white;
   border-radius: 5px;

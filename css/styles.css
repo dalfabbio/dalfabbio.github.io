@@ -51,6 +51,10 @@ a {
   width: 7px;
 }
 
+::-webkit-scrollbar-track {
+  background: #252627;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #D0CBCB;
   border-radius: 5px;
@@ -475,6 +479,9 @@ h1 {
   border-bottom: 1px solid #D0CBCB;
   margin-bottom: 0.7rem;
 }
+.skills-section a:hover {
+  text-decoration: underline;
+}
 
 .soft-skills-container {
   background-color: #A23415;
@@ -651,6 +658,42 @@ h1 {
   cursor: pointer;
   color: #A23415;
   box-shadow: 0 1px 10px 1px #D0CBCB;
+}
+
+.curriculum-title {
+  padding-top: 3rem;
+}
+
+.cv-section {
+  margin-bottom: 3rem;
+  width: clamp(160px, 100%, 900px);
+  background-color: #D0CBCB;
+  padding: 0.7rem;
+  height: 12rem;
+  border-radius: 0.5rem;
+}
+.cv-section p {
+  color: #252627;
+}
+
+.cvpart-title {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+}
+
+.cvpart-subtitle {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cvpart-content {
+  font-family: "Oxygen", sans-serif;
+}
+
+.cvpart-content span {
+  font-style: italic;
+  color: #252627;
 }
 
 @media only screen and (min-width: 701px) {
