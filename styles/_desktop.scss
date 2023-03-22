@@ -64,4 +64,42 @@
 .navbar-toggle-decoration {
   display: block;
 }
+
+
+//FINE NAVBAR
+
+//PAGINA CURRICULUM
+
+.education:hover {
+  height:20rem;
 }
+
+.career:hover {
+  height:20rem;
+}
+
+.pubblications:hover {
+  height:20rem;
+}
+
+.languages:hover {
+  height:20rem;
+}
+
+.volunteering:hover {
+  height:20rem;
+}
+
+.vol-lan-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  &>div {
+    flex: 1;
+  }
+}
+
+
+
+} //graffa di fine query

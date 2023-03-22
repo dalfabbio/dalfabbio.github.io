@@ -226,6 +226,7 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   justify-content: center;
   position: sticky;
   top: 20px;
+  z-index: 11;
 }
 
 .navbar-menu {
@@ -245,7 +246,7 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 .navbar-menu li:hover {
   text-decoration: underline;
 }
-.navbar-menu li:nth-child(5) {
+.navbar-menu li:last-child {
   margin-right: 3rem;
 }
 
@@ -266,7 +267,7 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   border-radius: 150rem;
   background-color: #252627;
   transition: 0.2s;
-  z-index: 10;
+  z-index: 99;
 }
 
 .navbar-toggle-container {
@@ -293,7 +294,7 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   display: flex;
   height: 1.5rem;
   width: 2.3rem;
-  z-index: 9;
+  z-index: 99;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -664,16 +665,67 @@ h1 {
   padding-top: 3rem;
 }
 
+.cv-section-title {
+  display: flex;
+  align-items: center;
+}
+.cv-section-title h2 {
+  padding-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .cv-section {
   margin-bottom: 3rem;
   width: clamp(160px, 100%, 900px);
   background-color: #D0CBCB;
   padding: 0.7rem;
-  height: 12rem;
+  height: 10rem;
   border-radius: 0.5rem;
+  transition: height 1s linear 0s;
 }
 .cv-section p {
   color: #252627;
+}
+
+main:has(.cv-section-expander #education:checked) .education {
+  height: 20rem;
+}
+
+main:has(.cv-section-expander #career:checked) .career {
+  height: 20rem;
+}
+
+main:has(.cv-section-expander #pubblications:checked) .pubblications {
+  height: 20rem;
+}
+
+main:has(.cv-section-expander #volunteering:checked) .volunteering {
+  height: 20rem;
+}
+
+main:has(.cv-section-expander #languages:checked) .languages {
+  height: 20rem;
+}
+
+.cv-section-expander {
+  position: relative;
+  width: 2rem;
+}
+.cv-section-expander svg {
+  fill: #D0CBCB;
+  padding-bottom: 0.5rem;
+  transition: transform 0.5s;
+}
+.cv-section-expander input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+}
+.cv-section-expander input[type=checkbox]:checked ~ svg {
+  transform: rotate(-180deg);
 }
 
 .cvpart-title {
@@ -742,5 +794,28 @@ h1 {
   .navbar-toggle-container,
   .navbar-toggle-decoration {
     display: block;
+  }
+  .education:hover {
+    height: 20rem;
+  }
+  .career:hover {
+    height: 20rem;
+  }
+  .pubblications:hover {
+    height: 20rem;
+  }
+  .languages:hover {
+    height: 20rem;
+  }
+  .volunteering:hover {
+    height: 20rem;
+  }
+  .vol-lan-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .vol-lan-container > div {
+    flex: 1;
   }
 }
