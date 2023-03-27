@@ -292,7 +292,7 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
 
 }
 
-header:has(.navbar-toggle-container #navbar-toggle[type="checkbox"]:checked) .navbar-container>.navbar-menu {
+.navbar-toggle-container>#navbar-toggle:checked ~ .navbar-container>.navbar-menu {
 display:flex;
 opacity:1;
 } 
