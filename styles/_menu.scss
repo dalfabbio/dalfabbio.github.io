@@ -22,8 +22,8 @@ fieldset {
 
 .section-selector {
   border: 0.2rem solid $white;
-  // width: 4.5rem;
-  // height: 4.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 3rem;
   padding: 0 0.1rem;
   margin-bottom: 1rem;
@@ -190,8 +190,8 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
   display: none;
   width: 100%;
   justify-content: center;
-  position: sticky;
-  top: 20px;
+  position: fixed;
+  top: 0;
   z-index:11;
 }
 
@@ -200,7 +200,6 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
   display: none;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
   padding-top: .4rem;
   width: 100%;
   background-color: $background-color;

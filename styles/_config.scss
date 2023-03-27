@@ -31,6 +31,10 @@ body {
   font-family: $corpus-font;
 }
 
+header {
+  position:relative;
+}
+
 h1 {
   font-family: $title-font;
   font-weight: 700;

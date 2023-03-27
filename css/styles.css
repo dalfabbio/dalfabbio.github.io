@@ -16,6 +16,10 @@ body {
   font-family: "Oxygen", sans-serif;
 }
 
+header {
+  position: relative;
+}
+
 h1 {
   font-family: "Prompt", sans-serif;
   font-weight: 700;
@@ -85,6 +89,8 @@ fieldset {
 
 .section-selector {
   border: 0.2rem solid #D0CBCB;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 3rem;
   padding: 0 0.1rem;
   margin-bottom: 1rem;
@@ -222,8 +228,8 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   display: none;
   width: 100%;
   justify-content: center;
-  position: sticky;
-  top: 20px;
+  position: fixed;
+  top: 0;
   z-index: 11;
 }
 
@@ -232,7 +238,6 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   display: none;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
   padding-top: 0.4rem;
   width: 100%;
   background-color: #252627;
@@ -755,9 +760,10 @@ main:has(.cv-section-expander #languages:checked) .languages {
   fill: #D0CBCB;
 }
 
-.section-selector {
+.curriculum-selector {
   height: 2rem;
   width: 105%;
+  background-color: #252627;
 }
 
 @media only screen and (min-width: 701px) {

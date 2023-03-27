@@ -69,10 +69,6 @@ main:has(.cv-section-expander #languages:checked) .languages {
   }
 }
 
-
-
-
-
 .cvpart-title {
   font-family: $title-font;
   font-weight: 700;
@@ -103,8 +99,9 @@ main:has(.cv-section-expander #languages:checked) .languages {
   }
 }
 
-.section-selector {
+.curriculum-selector {
   height: 2rem;
   width: 105%;
+  background-color: $background-color;
 }
 
