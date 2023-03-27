@@ -85,8 +85,6 @@ fieldset {
 
 .section-selector {
   border: 0.2rem solid #D0CBCB;
-  width: 4.5rem;
-  height: 4.5rem;
   border-radius: 3rem;
   padding: 0 0.1rem;
   margin-bottom: 1rem;
@@ -682,6 +680,7 @@ h1 {
   height: 10rem;
   border-radius: 0.5rem;
   transition: height 1s linear 0s;
+  overflow: hidden;
 }
 .cv-section p {
   color: #252627;
@@ -748,6 +747,19 @@ main:has(.cv-section-expander #languages:checked) .languages {
   color: #252627;
 }
 
+.home-container {
+  right: 9rem;
+}
+.home-container svg {
+  width: 60%;
+  fill: #D0CBCB;
+}
+
+.section-selector {
+  height: 2rem;
+  width: 105%;
+}
+
 @media only screen and (min-width: 701px) {
   h1 {
     font-size: 2.5rem;
@@ -794,21 +806,6 @@ main:has(.cv-section-expander #languages:checked) .languages {
   .navbar-toggle-container,
   .navbar-toggle-decoration {
     display: block;
-  }
-  .education:hover {
-    height: 20rem;
-  }
-  .career:hover {
-    height: 20rem;
-  }
-  .pubblications:hover {
-    height: 20rem;
-  }
-  .languages:hover {
-    height: 20rem;
-  }
-  .volunteering:hover {
-    height: 20rem;
   }
   .vol-lan-container {
     display: flex;

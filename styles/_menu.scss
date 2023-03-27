@@ -22,8 +22,8 @@ fieldset {
 
 .section-selector {
   border: 0.2rem solid $white;
-  width: 4.5rem;
-  height: 4.5rem;
+  // width: 4.5rem;
+  // height: 4.5rem;
   border-radius: 3rem;
   padding: 0 0.1rem;
   margin-bottom: 1rem;
@@ -185,8 +185,6 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
 
 
 //NAVBAR
-
-
 
 .navbar-container {
   display: none;

@@ -20,6 +20,7 @@
   height: 10rem;
   border-radius: $predefined-radius;
   transition: height 1s linear 0s;
+  overflow: hidden;
   p {
     color: $background-color;
   }
@@ -90,5 +91,20 @@ main:has(.cv-section-expander #languages:checked) .languages {
 .cvpart-content span {
   font-style: italic;
   color: $background-color;
+}
+
+//HAMBURGER MENU CURRICULUM STYLE
+
+.home-container {
+  right: 9rem;
+  svg {
+    width: 60%;
+    fill:$white;
+  }
+}
+
+.section-selector {
+  height: 2rem;
+  width: 105%;
 }
 
