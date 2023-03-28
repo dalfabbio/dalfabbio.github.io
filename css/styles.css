@@ -269,12 +269,12 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   height: 8rem;
   border-radius: 150rem;
   background-color: #252627;
-  transition: 0.2s;
+  transition: 0.3s;
   z-index: 99;
 }
 
-.navbar-toggle-container {
-  display: none;
+.navbar-toggle,
+.navbar-lines {
   position: fixed;
   top: 0.7rem;
   right: 0.5rem;
@@ -282,14 +282,11 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
   cursor: pointer;
 }
 
-.navbar-toggle-container {
+.navbar-lines {
   opacity: 0.5;
 }
-.navbar-toggle-container:hover {
-  opacity: 1;
-}
 
-.navbar-toggle-decoration:hover ~ .navbar-toggle-container {
+.navbar-toggle:hover ~ .navbar-lines {
   opacity: 1;
 }
 
@@ -313,36 +310,34 @@ body:has(.hamburger-menu-container #opener[type=radio]:checked, .arrow-up-contai
 }
 
 .navbar-toggle {
-  position: absolute;
-  height: 1.7rem;
+  position: fixed;
+  top: 0.7rem;
+  right: 0.5rem;
+  height: 2rem;
   width: 2rem;
   opacity: 0;
   z-index: 100;
   cursor: pointer;
 }
 
-header:has(.navbar-toggle-container #navbar-toggle[type=checkbox]:checked) .navbar-container > .navbar-menu {
+#navbar-toggle[type=checkbox]:checked ~ .navbar-menu {
   display: flex;
   opacity: 1;
 }
 
-header:has(.navbar-toggle-container #navbar-toggle[type=checkbox]:checked) .navbar-toggle-decoration {
+#navbar-toggle[type=checkbox]:checked + .navbar-toggle-decoration {
   opacity: 0;
 }
 
-header:has(.navbar-toggle-container #navbar-toggle[type=checkbox]:checked) .navbar-toggle-container {
-  opacity: 1;
-}
-
-.navbar-toggle-container #navbar-toggle[type=checkbox]:checked ~ .navbar-lines .line1 {
+#navbar-toggle[type=checkbox]:checked ~ .navbar-lines .line1 {
   transform: rotate(45deg);
 }
 
-.navbar-toggle-container #navbar-toggle[type=checkbox]:checked ~ .navbar-lines .line2 {
+#navbar-toggle[type=checkbox]:checked ~ .navbar-lines .line2 {
   transform: scaleY(0);
 }
 
-.navbar-toggle-container #navbar-toggle[type=checkbox]:checked ~ .navbar-lines .line3 {
+#navbar-toggle[type=checkbox]:checked ~ .navbar-lines .line3 {
   transform: rotate(-45deg);
 }
 
@@ -760,7 +755,7 @@ main:has(.cv-section-expander #languages:checked) .languages {
   fill: #D0CBCB;
 }
 
-.curriculum-selector {
+.cv-section-selector {
   height: 2rem;
   width: 105%;
   background-color: #252627;
@@ -812,6 +807,21 @@ main:has(.cv-section-expander #languages:checked) .languages {
   .navbar-toggle-container,
   .navbar-toggle-decoration {
     display: block;
+  }
+  .education:hover {
+    height: 20rem;
+  }
+  .career:hover {
+    height: 20rem;
+  }
+  .pubblications:hover {
+    height: 20rem;
+  }
+  .languages:hover {
+    height: 20rem;
+  }
+  .volunteering:hover {
+    height: 20rem;
   }
   .vol-lan-container {
     display: flex;
