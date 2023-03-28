@@ -103,8 +103,9 @@ main:has(.cv-section-expander #languages:checked) .languages {
   }
 }
 
-.section-selector {
+.cv-section-selector {
   height: 2rem;
   width: 105%;
+  background-color: $background-color;
 }
 

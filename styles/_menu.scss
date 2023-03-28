@@ -22,8 +22,8 @@ fieldset {
 
 .section-selector {
   border: 0.2rem solid $white;
-  // width: 4.5rem;
-  // height: 4.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 3rem;
   padding: 0 0.1rem;
   margin-bottom: 1rem;
@@ -187,7 +187,7 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
 //NAVBAR
 
 .navbar-container {
-  display: none;
+  display:none;
   width: 100%;
   justify-content: center;
   position: sticky;
@@ -236,12 +236,12 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
   height: 8rem;
   border-radius: 150rem;
   background-color: $background-color;
-  transition: .2s;
+  transition: .3s;
   z-index: 99;
 }
 
-.navbar-toggle-container {
-  display: none;
+.navbar-toggle,
+.navbar-lines {
   position: fixed;
   top: .7rem;
   right: .5rem;
@@ -250,14 +250,12 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
 
 }
 
-.navbar-toggle-container {
+
+.navbar-lines {
   opacity: .5;
-  &:hover {
-    opacity:1;
-  }
 }
 
-.navbar-toggle-decoration:hover ~.navbar-toggle-container {
+.navbar-toggle:hover ~ .navbar-lines {
   opacity: 1;
 }
 
@@ -283,37 +281,35 @@ body:has(.hamburger-menu-container #opener[type="radio"]:checked) main {
 }
 
 .navbar-toggle {
-  position: absolute;
-  height: 1.7rem;
+  position: fixed;
+  top: .7rem;
+  right: .5rem;
+  height: 2rem;
   width: 2rem;
   opacity: 0;
   z-index: 100;
   cursor: pointer;
-
 }
 
-.navbar-toggle-container>#navbar-toggle:checked ~ .navbar-container>.navbar-menu {
+#navbar-toggle[type="checkbox"]:checked ~ .navbar-menu {
 display:flex;
 opacity:1;
-} 
+}
 
-header:has(.navbar-toggle-container #navbar-toggle[type="checkbox"]:checked) .navbar-toggle-decoration {
+#navbar-toggle[type="checkbox"]:checked + .navbar-toggle-decoration {
   opacity: 0;
 } 
 
-header:has(.navbar-toggle-container #navbar-toggle[type="checkbox"]:checked) .navbar-toggle-container {
-  opacity: 1;
-} 
 
-.navbar-toggle-container #navbar-toggle[type="checkbox"]:checked ~ .navbar-lines .line1 {
+#navbar-toggle[type="checkbox"]:checked ~ .navbar-lines .line1 {
   transform: rotate(45deg);
 }
 
-.navbar-toggle-container #navbar-toggle[type="checkbox"]:checked ~ .navbar-lines .line2 {
+#navbar-toggle[type="checkbox"]:checked ~ .navbar-lines .line2 {
   transform: scaleY(0);
 }
 
-.navbar-toggle-container #navbar-toggle[type="checkbox"]:checked ~ .navbar-lines .line3 {
+#navbar-toggle[type="checkbox"]:checked ~ .navbar-lines .line3 {
   transform: rotate(-45deg);
 }
 
