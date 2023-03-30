@@ -773,7 +773,7 @@ h1 {
 }
 
 .languages {
-  transition: height 1s linear 0s;
+  transition: height 0.5s linear 0s;
 }
 
 .cvpart-title {
