@@ -41,9 +41,9 @@
   @include main-dimension;
   background-color: $white;
   padding: $padding-section-p;
-  height: 10rem;
+  height: 5rem;
   border-radius: $predefined-radius;
-  transition: height 1s linear 0s;
+  transition: height 1.5s linear 0s;
   overflow: hidden;
   position: relative;
   p {
@@ -51,24 +51,38 @@
   }
 }
 
+.cv-section>div {
+  margin-bottom: .5rem;
+  ul {
+  color: $background-color;
+  list-style-type: circle;
+  margin-left: 1rem;
+  }
+
+  a {
+    color: $background-color;
+    }
+}
+
+
 #education:checked ~ .education {
-  height: 20rem;
+  height: 39rem;
 }
 
 #career:checked ~ .career {
-  height: 20rem;
+  height: 27rem;
 }
 
 #pubblications:checked ~ .pubblications {
-  height: 20rem;
+  height: 59rem;
 }
 
 #volunteering:checked ~ .volunteering {
-  height: 20rem;
+  height: 11rem;
 }
 
 #languages:checked ~ .languages {
-  height: 20rem;
+  height: 22.5rem;
 }
 
 

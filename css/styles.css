@@ -4,6 +4,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+h1, h2, h3, p, a, ul {
   color: #D0CBCB;
 }
 
@@ -697,9 +700,9 @@ h1 {
   width: clamp(160px, 100%, 900px);
   background-color: #D0CBCB;
   padding: 0.7rem;
-  height: 10rem;
+  height: 5rem;
   border-radius: 0.5rem;
-  transition: height 1s linear 0s;
+  transition: height 1.5s linear 0s;
   overflow: hidden;
   position: relative;
 }
@@ -707,24 +710,36 @@ h1 {
   color: #252627;
 }
 
+.cv-section > div {
+  margin-bottom: 0.5rem;
+}
+.cv-section > div ul {
+  color: #252627;
+  list-style-type: circle;
+  margin-left: 1rem;
+}
+.cv-section > div a {
+  color: #252627;
+}
+
 #education:checked ~ .education {
-  height: 20rem;
+  height: 39rem;
 }
 
 #career:checked ~ .career {
-  height: 20rem;
+  height: 27rem;
 }
 
 #pubblications:checked ~ .pubblications {
-  height: 20rem;
+  height: 59rem;
 }
 
 #volunteering:checked ~ .volunteering {
-  height: 20rem;
+  height: 11rem;
 }
 
 #languages:checked ~ .languages {
-  height: 20rem;
+  height: 22.5rem;
 }
 
 .cvpart-title {
@@ -809,19 +824,19 @@ h1 {
     display: block;
   }
   .education:hover {
-    height: 20rem;
+    height: 39rem;
   }
   .career:hover {
-    height: 20rem;
+    height: 27rem;
   }
   .pubblications:hover {
-    height: 20rem;
+    height: 59rem;
   }
   .languages:hover {
-    height: 20rem;
+    height: 22.5rem;
   }
   .volunteering:hover {
-    height: 20rem;
+    height: 11rem;
   }
   .vol-lan-container {
     display: flex;
