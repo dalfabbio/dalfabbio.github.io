@@ -665,6 +665,9 @@ h1 {
 .curriculum-title {
   padding-top: 3rem;
 }
+.curriculum-title a:hover {
+  text-decoration: underline;
+}
 
 .cv-section-container {
   position: relative;
@@ -702,7 +705,6 @@ h1 {
   padding: 0.7rem;
   height: 5rem;
   border-radius: 0.5rem;
-  transition: height 1.5s linear 0s;
   overflow: hidden;
   position: relative;
 }
@@ -740,6 +742,26 @@ h1 {
 
 #languages:checked ~ .languages {
   height: 22.5rem;
+}
+
+.education {
+  transition: height 1.5s linear 0s;
+}
+
+.career {
+  transition: height 1s linear 0s;
+}
+
+.pubblications {
+  transition: height 3s linear 0s;
+}
+
+.volunteering {
+  transition: height 0.7s linear 0s;
+}
+
+.languages {
+  transition: height 1s linear 0s;
 }
 
 .cvpart-title {

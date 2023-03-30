@@ -1,6 +1,10 @@
 
 .curriculum-title {
   padding-top: 3rem;
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .cv-section-container {
@@ -43,7 +47,6 @@
   padding: $padding-section-p;
   height: 5rem;
   border-radius: $predefined-radius;
-  transition: height 1.5s linear 0s;
   overflow: hidden;
   position: relative;
   p {
@@ -85,6 +88,25 @@
   height: 22.5rem;
 }
 
+.education {
+  transition: height 1.5s linear 0s;
+}
+
+.career {
+  transition: height 1s linear 0s;
+}
+
+.pubblications {
+  transition: height 3s linear 0s;
+}
+
+.volunteering {
+  transition: height .7s linear 0s;
+}
+
+.languages {
+  transition: height 1s linear 0s;
+}
 
 
 //contenuto delle sezioni
