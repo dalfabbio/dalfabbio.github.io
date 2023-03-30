@@ -724,16 +724,28 @@ h1 {
   color: #252627;
 }
 
+.languages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+.languages div:nth-child(2) {
+  border-right: 1px solid #252627;
+  border-left: 1px solid #252627;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
 #education:checked ~ .education {
   height: 39rem;
 }
 
 #career:checked ~ .career {
-  height: 27rem;
+  height: 25rem;
 }
 
 #pubblications:checked ~ .pubblications {
-  height: 59rem;
+  height: 47rem;
 }
 
 #volunteering:checked ~ .volunteering {
@@ -741,7 +753,7 @@ h1 {
 }
 
 #languages:checked ~ .languages {
-  height: 22.5rem;
+  height: 8rem;
 }
 
 .education {
@@ -849,13 +861,13 @@ h1 {
     height: 39rem;
   }
   .career:hover {
-    height: 27rem;
+    height: 25rem;
   }
   .pubblications:hover {
-    height: 59rem;
+    height: 47rem;
   }
   .languages:hover {
-    height: 22.5rem;
+    height: 8rem;
   }
   .volunteering:hover {
     height: 11rem;

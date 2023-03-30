@@ -67,17 +67,29 @@
     }
 }
 
+.languages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+
+  div:nth-child(2) {
+    border-right: 1px solid $background-color;
+    border-left: 1px solid $background-color;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
 
 #education:checked ~ .education {
   height: 39rem;
 }
 
 #career:checked ~ .career {
-  height: 27rem;
+  height: 25rem;
 }
 
 #pubblications:checked ~ .pubblications {
-  height: 59rem;
+  height: 47rem;
 }
 
 #volunteering:checked ~ .volunteering {
@@ -85,7 +97,7 @@
 }
 
 #languages:checked ~ .languages {
-  height: 22.5rem;
+  height: 8rem;
 }
 
 .education {
