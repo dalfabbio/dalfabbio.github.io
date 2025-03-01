@@ -1,4 +1,3 @@
-
 .curriculum-title {
   padding-top: 3rem;
 
@@ -12,7 +11,7 @@
 
   h2 {
     padding-right: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     display: inline-block;
     vertical-align: center;
   }
@@ -21,21 +20,21 @@
     position: absolute;
     z-index: 100;
     width: 2rem;
-    height:2rem;
+    height: 2rem;
     opacity: 0;
-    cursor:pointer;
-  }
-  
-  input[type='checkbox']:checked ~ svg {
-    transform:rotate(-180deg);
+    cursor: pointer;
   }
 
-  svg { 
+  input[type="checkbox"]:checked ~ svg {
+    transform: rotate(-180deg);
+  }
+
+  svg {
     width: 2rem;
     fill: $white;
-    transition:transform .5s;
+    transition: transform 0.5s;
     display: inline-block;
-    margin-top: .2rem;
+    margin-top: 0.2rem;
     vertical-align: top;
   }
 }
@@ -54,17 +53,17 @@
   }
 }
 
-.cv-section>div {
-  margin-bottom: .5rem;
+.cv-section > div {
+  margin-bottom: 0.5rem;
   ul {
-  color: $background-color;
-  list-style-type: circle;
-  margin-left: 1rem;
+    color: $background-color;
+    list-style-type: circle;
+    margin-left: 1rem;
   }
 
   a {
     color: $background-color;
-    }
+  }
 }
 
 .languages {
@@ -113,16 +112,14 @@
 }
 
 .volunteering {
-  transition: height .7s linear 0s;
+  transition: height 0.7s linear 0s;
 }
 
 .languages {
-  transition: height .5s linear 0s;
+  transition: height 0.5s linear 0s;
 }
 
-
 //contenuto delle sezioni
-
 
 .cvpart-title {
   font-family: $title-font;
@@ -150,7 +147,7 @@
   right: 9rem;
   svg {
     width: 60%;
-    fill:$white;
+    fill: $white;
   }
 }
 
@@ -159,4 +156,3 @@
   width: 105%;
   background-color: $background-color;
 }
-
